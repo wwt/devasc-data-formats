@@ -12,7 +12,7 @@ This repo has several guided, hands-on exercises which will help you learn and p
 
 1. Access the [WWT Programmability Foundations Lab](https://www.wwt.com/lab/programmability-foundations-lab) landing page and click the **Launch Lab** button:
 
-![1_lab_launch](../../../../../Desktop/Docker/gif/1_lab_launch.gif)
+![1_lab_launch](_images/1_lab_launch.gif)
 
 
 
