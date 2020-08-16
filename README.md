@@ -15,11 +15,15 @@ This repo has several guided, hands-on exercises which will help you learn and p
 ![1_lab_launch](_images/1_lab_launch.gif)
 
 
+---
+
 
 2. Click the **My WWT** link and click the **My Labs** button on the next page:
 
 ![2_lab_launch](_images/2_lab_launch.gif)
 
+
+---
 
 
 3. Click the **Access Lab** button next to your *Programmability Foundations Lab* abd click the **Open in ATC Lab Gateway** button:
@@ -29,11 +33,15 @@ This repo has several guided, hands-on exercises which will help you learn and p
 ![3_lab_launch](_images/3_lab_launch.gif)
 
 
+---
+
 
 4. Click **Skip This Build** on the *Docker Desktop Update* window and click **Dismiss** on the *Docker Feedback* window.
 
 ![4_lab_launch](_images/4_lab_launch.gif)
 
+
+---
 
 
 5. Expand the Windows 10 System Tray and wait for *Docker Desktop* to start.
@@ -41,6 +49,14 @@ This repo has several guided, hands-on exercises which will help you learn and p
 - A system notification will display when Docker Desktop starts; this may take several minutes.
 
 ![5_lab_launch](_images/5_lab_launch.gif)
+
+
+---
+
+
+### JupyterLab Launch
+
+
 
 
 
