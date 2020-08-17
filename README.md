@@ -26,6 +26,8 @@ The **Lab Setup** section has step-by-step directions to help you deploy the lea
 
 ### Programmability Foundations Lab Launch
 
+\*\*Note - The JupyterLab setup requires some copy and paste operations from your desktop to your instance of the WWT Programmability Foundations Lab.  The copy and paste experience is the most reliable when you launch the Programmability Foundations Lab with **Google Chrome**.\*\*
+
 1. Access the [WWT Programmability Foundations Lab](https://www.wwt.com/lab/programmability-foundations-lab) landing page and click the **Launch Lab** button:
 
 ![1_lab_launch](_images/1_lab_launch.gif)
@@ -43,8 +45,7 @@ The **Lab Setup** section has step-by-step directions to help you deploy the lea
 
 
 3. Click the **Access Lab** button next to your *Programmability Foundations Lab* abd click the **Open in ATC Lab Gateway** button:
-
-- It may take a few minutes for Windows services to start, please be patient.
+   - It may take a few minutes for Windows services to start, please be patient.
 
 ![3_lab_launch](_images/3_lab_launch.gif)
 
@@ -61,8 +62,7 @@ The **Lab Setup** section has step-by-step directions to help you deploy the lea
 
 
 5. Expand the Windows 10 System Tray and wait for *Docker Desktop* to start.
-
-- A system notification will display when Docker Desktop starts; this may take several minutes.
+   - A system notification will display when Docker Desktop starts; this may take several minutes.
 
 ![5_lab_launch](_images/5_lab_launch.gif)
 
@@ -72,10 +72,35 @@ The **Lab Setup** section has step-by-step directions to help you deploy the lea
 
 ### JupyterLab Launch
 
-1. Download configuration file and installation script:
-2. Grant Windows PowerShell permission to run unsigned scripts:
-3. Run the JupyterLab Launcher script:
-4. Access the exercises using Jupyter Notebooks
+1. Open Windows PowerShell and then paste/run the following commands:
+
+```powershell
+# Grant Windows PowerShell permission to run unsigned scripts
+Start-Process -FilePath PowerShell.exe -Verb Runas -ArgumentList "Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force"
+```
+
+```powershell
+# Download the configuration file
+Invoke-WebRequest -Uri 'https://devnet-jupyter.s3-us-west-2.amazonaws.com/.repo' -OutFile '.repo'
+```
+
+```powershell
+# Download the installation script
+Invoke-WebRequest -Uri 'https://devnet-jupyter.s3-us-west-2.amazonaws.com/jupyter_launcher.ps1' -OutFile 'jupyter_launcher.ps1'
+```
+
+```powershell
+# Run the installation script - the typical first installation typically takes between 3-5 minutes
+.\jupyter_launcher.ps1
+```
+
+
+
+2. Access the exercises using Jupyter Notebooks:
+   - Click on the repo name, **devasc-data-formats** in the Jupyter Sidebar.
+   - Click on the **part_i_python** folder.
+   - Click on the **python.ipynb** notebook.
+   - Follow the navigation at the bottom of each notebook file.
 
 
 
