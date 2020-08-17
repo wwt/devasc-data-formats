@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<root>
+	<interfaces>
+		<eth0>
+			<description>uplink</description>
+			<address>10.0.25.1</address>
+			<mask>255.255.255.0</mask>
+			<speed>1000</speed>
+			<shutdown>false</shutdown>
+		</eth0>
+	</interfaces>
+  <!-- Next interface -->
+	<interfaces>
+		<eth1>
+			<description>downlink</description>
+			<address>10.0.30.1</address>
+			<mask>255.255.255.0</mask>
+			<speed>1000</speed>
+			<shutdown>false</shutdown>
+		</eth1>
+	</interfaces>
+</root>
