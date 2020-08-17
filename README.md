@@ -87,7 +87,7 @@ The **Lab Setup** section has step-by-step directions to help you deploy the lea
 * [Exercise 1 - Python Objects & File Management](part_i_python/python.ipynb)
 * [Exercise 2 - JSON Structured Data](part_ii_json/json.ipynb)
 * [Exercise 3 - YAML Structured Data](part_iii_yaml/yaml.ipynb)
-* [Exercise 4 - XML Structured Data](part_iv/xml.ipynb)
+* [Exercise 4 - XML Structured Data](part_iv_xml/xml.ipynb)
 
 
 
