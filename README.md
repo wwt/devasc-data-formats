@@ -109,13 +109,25 @@ Invoke-WebRequest -Uri 'https://devnet-jupyter.s3-us-west-2.amazonaws.com/jupyte
 .\jupyter_launcher.ps1
 ```
 
+![4_jupyter_launch](_images/4_jupyter_launch.gif)
 
 
-2. Access the exercises using Jupyter Notebooks:
+
+2. When prompted, enter your GitHub credentials:
+   - Use your standard GitHub username.
+   - Substitute your PAT for your password.
+
+![5_jupyter_launch](_images/5_jupyter_launch.gif)
+
+
+
+3. Access the exercises using Jupyter Notebooks:
    - Click on the repo name, **devasc-data-formats** in the Jupyter Sidebar.
    - Click on the **part_i_python** folder.
    - Click on the **python.ipynb** notebook.
    - Follow the navigation at the bottom of each notebook file.
+
+![6_jupyter_launch](_images/6_jupyter_launch.gif)
 
 
 
