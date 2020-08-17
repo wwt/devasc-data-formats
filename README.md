@@ -79,15 +79,30 @@ The **Lab Setup** section has step-by-step directions to help you deploy the lea
 Start-Process -FilePath PowerShell.exe -Verb Runas -ArgumentList "Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force"
 ```
 
+![1_jupyter_launch](_images/1_jupyter_launch.gif)
+
+
+
+
 ```powershell
 # Download the configuration file
 Invoke-WebRequest -Uri 'https://devnet-jupyter.s3-us-west-2.amazonaws.com/.repo' -OutFile '.repo'
 ```
 
+![2_jupyter_launch](_images/2_jupyter_launch.gif)
+
+
+
+
 ```powershell
 # Download the installation script
 Invoke-WebRequest -Uri 'https://devnet-jupyter.s3-us-west-2.amazonaws.com/jupyter_launcher.ps1' -OutFile 'jupyter_launcher.ps1'
 ```
+
+![3_jupyter_launch](_images/3_jupyter_launch.gif)
+
+
+
 
 ```powershell
 # Run the installation script - the typical first installation typically takes between 3-5 minutes
