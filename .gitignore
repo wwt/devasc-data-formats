@@ -1,3 +1,9 @@
+# Completed Data Files
+python_data.py
+new_network_data.json
+new_network_data.yaml
+new_network_data.xml
+
 # macOS Spotlight Index
 .DS_Store
 
