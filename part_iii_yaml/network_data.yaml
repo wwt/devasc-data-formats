@@ -1,0 +1,62 @@
+---
+devices:
+  nxos1:
+    hostname: 172.16.1.88
+    port: 443
+    username: admin 
+    password: admin
+    platform: nxos
+    groups: 
+      - dna_3
+    data: 
+      site: atc56
+      role: access 
+      type: network_device  
+  dna-3-a1:
+    hostname: dna-3-a1.campus.wwtatc.local
+    port: 22
+    username: wwt
+    password: WWTwwt1!
+    platform: ios
+    groups: 
+      - dna_3
+    data: 
+      site: atc56
+      role: access 
+      type: network_device
+  dna-3-a2:
+    hostname: dna-3-a2.campus.wwtatc.local
+    port: 22
+    username: wwt
+    password: WWTwwt1!
+    platform: ios
+    groups:
+      - dna_3
+    data:
+      site: atc56
+      role: access
+      type: network_device
+  dna-3-d1:
+    hostname: dna-3-d1.campus.wwtatc.local
+    port: 22
+    username: wwt
+    password: WWTwwt1!
+    platform: ios
+    groups:
+      - dna_3
+    data:
+      site: atc56
+      role: distribution
+      type: network_device
+  dna-3-d2:
+    hostname: dna-3-d2.campus.wwtatc.local
+    port: 22
+    username: wwt
+    password: WWTwwt1!
+    platform: ios
+    groups:
+      - dna_3
+    data:
+      site: atc56
+      role: distribution
+      type: network_device
