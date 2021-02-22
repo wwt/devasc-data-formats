@@ -2,16 +2,16 @@
 interfaces:
  # List of interfaces
  - eth0: 
-   description: uplink
-   address: 10.0.25.1
-   mask: "255.255.255.0"
-   speed: 1000
-   shutdown: True
+     description: uplink
+     address: 10.0.25.1
+     mask: "255.255.255.0"
+     speed: 1000
+     shutdown: True
 
  - eth1: 
-   description: downlink
-   address: "10.0.30.1"
-   mask: "255.255.255.0"
-   speed: 1000
-   shutdown: false
+    description: downlink
+    address: "10.0.30.1"
+    mask: "255.255.255.0"
+    speed: 1000
+    shutdown: false
 ...
