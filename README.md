@@ -4,7 +4,7 @@
 
 This repo has several guided, hands-on exercises which will help you learn and practice how to use various data encoding formats with Python.  These exercises compliment the *Data Encoding Formats* presentation which is available in the Study Group files repository.
 
-The **Lab Setup** section has step-by-step directions to help you deploy the learning materials using [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html) within the [WWT Programmability Foundations Lab](https://www.wwt.com/lab/programmability-foundations-lab).
+The **Lab Setup** section has step-by-step directions to help you deploy the learning materials using a guided, interactive Python tool called [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html).
 
 \*\* Note - this lab requires that you have a **GitHub *Personal Access Token (PAT)*** available with ***repo*** scope permissions \*\*
 
@@ -24,110 +24,97 @@ The **Lab Setup** section has step-by-step directions to help you deploy the lea
 
 ## Lab Setup
 
-### Programmability Foundations Lab Launch
+### Jupyter Lab Environment
 
-\*\*Note - The JupyterLab setup requires some copy and paste operations from your desktop to your instance of the WWT Programmability Foundations Lab.  The copy and paste experience is the most reliable when you launch the Programmability Foundations Lab with **Google Chrome**.\*\*
+1. Open the [Jupyter In-Browser Trial Site](https://jupyter.org/try) landing page and click the **Try JupyterLab** button:
+   - It may take several seconds for the JupyterLab trial to load, please be patient.
 
-1. Access the [WWT Programmability Foundations Lab](https://www.wwt.com/lab/programmability-foundations-lab) landing page and click the **Launch Lab** button:
+![1_lab_launch](_images/1_launch_trial.png)
 
-![1_lab_launch](_images/1_lab_launch.gif)
-
-
----
-
-
-2. Click the **My WWT** link and click the **My Labs** button on the next page:
-
-![2_lab_launch](_images/2_lab_launch.gif)
 
 
 ---
 
 
-3. Click the **Access Lab** button next to your *Programmability Foundations Lab* abd click the **Open in ATC Lab Gateway** button:
-   - It may take a few minutes for Windows services to start, please be patient.
+2. The JupyterLab trial site will automatically open some tabbed panes, close all JupyterLab panes:
 
-![3_lab_launch](_images/3_lab_launch.gif)
+   - Click the upper-right corner in each of the open JupyterLab trial panes.
+   - Click the ![2_lab_launch](_images/2a_discard_button.png) button if you receive a prompt to save changes.
+   - A new **Launcher** tab will appear, leave this pane open.
 
+![2_lab_launch](_images/2_close_tabs.png)
 
----
-
-
-4. Click **Skip This Build** on the *Docker Desktop Update* window and click **Dismiss** on the *Docker Feedback* window.
-
-![4_lab_launch](_images/4_lab_launch.gif)
 
 
 ---
 
 
-5. Expand the Windows 10 System Tray and wait for *Docker Desktop* to start.
-   - A system notification will display when Docker Desktop starts; this may take several minutes.
+3. Click the **Terminal** button in the **Other** section of the **Launcher** tab to open a new terminal window:
 
-![5_lab_launch](_images/5_lab_launch.gif)
+   - A new tab will open with a Linux terminal shell.
+
+![3_lab_launch](_images/3_open_terminal.png)
+
+
 
 
 ---
 
 
-### JupyterLab Launch
+### JupyterLab Environment Configuration
 
-1. Open Windows PowerShell and then paste/run the following commands:
+1. Install the **xmltodict** Python Package with the following command in the JupyterLab terminal:
+   - For this and subsequent commands/input, you may type in the JupyterLab terminal directly or you may paste content in the JupyterLab terminal with a keyboard paste sequence:
+     - Windows - Ctrl-V
+     - macOS - Command-V
 
-```powershell
-# Grant Windows PowerShell permission to run unsigned scripts
-Start-Process -FilePath PowerShell.exe -Verb Runas -ArgumentList "Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Force"
+```shell
+python -m pip install xmltodict
 ```
 
-![1_jupyter_launch](_images/1_jupyter_launch.gif)
+![1_jupyter_launch](_images/1_xmltodict_command.png)
 
 
 
+2. Clone the Git repository to the JupyterLab environment with the following command in the JupyterLab terminal:
 
-```powershell
-# Download the configuration file
-Invoke-WebRequest -Uri 'https://devnet-jupyter.s3-us-west-2.amazonaws.com/.repo' -OutFile '.repo'
+```shell
+git clone https://github.com/wwt/devasc-data-formats
 ```
-
-![2_jupyter_launch](_images/2_jupyter_launch.gif)
-
+![1_jupyter_launch](_images/2_git_clone_command.png)
 
 
 
-```powershell
-# Download the installation script
-Invoke-WebRequest -Uri 'https://devnet-jupyter.s3-us-west-2.amazonaws.com/jupyter_launcher.ps1' -OutFile 'jupyter_launcher.ps1'
-```
-
-![3_jupyter_launch](_images/3_jupyter_launch.gif)
-
-
-
-
-```powershell
-# Run the installation script - the typical first installation typically takes between 3-5 minutes
-.\jupyter_launcher.ps1
-```
-
-![4_jupyter_launch](_images/4_jupyter_launch.gif)
-
-
-
-2. When prompted, enter your GitHub credentials:
+3. When prompted, enter your GitHub credentials:
    - Use your standard GitHub username.
    - Substitute your PAT for your password.
 
-![5_jupyter_launch](_images/5_jupyter_launch.gif)
+![1_jupyter_launch](_images/3_git_clone_credentials.png)
 
 
 
-3. Access the exercises using Jupyter Notebooks:
-   - Click on the repo name, **devasc-data-formats** in the Jupyter Sidebar.
-   - Click on the **part_i_python** folder.
-   - Click on the **python.ipynb** notebook.
-   - Follow the navigation at the bottom of each notebook file.
+4. Click on the root folder icon in the file navigator and then double-click on the **devasc-data-formats** folder:
 
-![6_jupyter_launch](_images/6_jupyter_launch.gif)
+![5_jupyter_launch](_images/4_root_folder_navigation.png)
+
+
+
+5. Double-click on the **part_i_python** folder:
+
+![5_jupyter_launch](_images/5_git_repo_navigation.png)
+
+
+
+6. Start the exercises in the Jupyter Notebooks:
+   - Click on the **python.ipynb** Notebook to open a new tab.
+
+
+![6_jupyter_launch](_images/6_open_first_notebook.png)   
+
+
+
+7. Follow the step-by-step instructions in the Jupyter Notebook
+   - Follow the navigation at the bottom of each Notebook to advance to other exercises.
 
 
 
