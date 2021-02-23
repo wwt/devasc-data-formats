@@ -115,6 +115,7 @@ git clone https://github.com/wwt/devasc-data-formats
 
 7. Follow the step-by-step instructions in the Jupyter Notebook
    - Follow the navigation at the bottom of each Notebook to advance to other exercises.
+   - Continue to use the file navigator, as necessary, to access different notebooks and repository files.
 
 
 
