@@ -64,12 +64,17 @@ The **Lab Setup** section has step-by-step directions to help you deploy the lea
 ### JupyterLab Environment Configuration
 
 1. Install the **xmltodict** Python Package with the following command in the JupyterLab terminal:
+   - Choose one of the two optional commands below to perform the installation with **pip**.
    - For this and subsequent commands/input, you may type in the JupyterLab terminal directly or you may paste content in the JupyterLab terminal with a keyboard paste sequence:
      - Windows - Ctrl-V
      - macOS - Command-V
 
 ```shell
+# Option 1 - direct package install
 python -m pip install xmltodict
+
+# Option 2 - install via requirements file
+python -m pip install -r devasc-data-formats/requirements.txt
 ```
 
 ![1_jupyter_launch](_images/1_xmltodict_command.png)
