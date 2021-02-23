@@ -69,7 +69,6 @@ The **Lab Setup** section has step-by-step directions to help you deploy the lea
      - macOS - Command-V
 
 ```shell
-# Option 1 - direct package install
 python -m pip install xmltodict
 ```
 
