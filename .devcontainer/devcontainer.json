@@ -1,0 +1,34 @@
+{
+    "name": "WWT - Cisco DevNet DEVASC Data Formats Dev Container",
+    "build": {
+        "dockerfile": "../Dockerfile",
+        "context": ".."
+    },
+    "extensions": [
+        "docsmsft.docs-yaml",
+        "ms-azuretools.vscode-docker",
+        "ms-python.python",
+        "ms-python.vscode-pylance",
+        "redhat.vscode-yaml",
+    ],
+    "forwardPorts": [
+        8888
+    ],
+    "postStartCommand": ["./requirements/server-launch.sh"],
+    "settings": {
+        "[yaml]": {
+            "editor.insertSpaces": true,
+            "editor.tabSize": 2,
+            "editor.autoIndent": "keep",
+            "editor.quickSuggestions": {
+                "other": true,
+                "comments": false,
+                "strings": true
+            }
+        },
+        "python.pythonPath": "/usr/local/bin/python3",
+        "python.formatting.provider": "autopep8",
+        "python.linting.enabled": true,
+        "python.linting.flake8Enabled": true
+    }
+}
