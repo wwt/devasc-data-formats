@@ -5,6 +5,8 @@
         "context": ".."
     },
     "extensions": [
+        "davidanson.vscode-markdownlint",
+        "docsmsft.docs-markdown",
         "docsmsft.docs-yaml",
         "ms-azuretools.vscode-docker",
         "ms-python.python",
@@ -12,6 +14,7 @@
         "redhat.vscode-yaml",
     ],
     "forwardPorts": [
+        8000,
         8888
     ],
     "postStartCommand": ["./requirements/server-launch.sh"],
