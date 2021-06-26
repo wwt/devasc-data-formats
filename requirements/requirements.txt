@@ -1,0 +1,15 @@
+# MkDocs Core
+mkdocs-material
+
+# Python
+ipython
+jupyterlab
+lxml
+pyyaml
+requests
+xmltodict
+
+# Syntax and formatting
+autopep8
+flake8
+yamllint
