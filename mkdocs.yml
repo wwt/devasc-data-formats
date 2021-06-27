@@ -57,15 +57,18 @@ theme:
         prebuild_index: true
 
 markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-  - admonition
-  - attr_list
   - pymdownx.highlight
   - pymdownx.details
   - pymdownx.keys
+  - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.tabbed
   - pymdownx.tasklist
   - toc:
       permalink: true
