@@ -1,0 +1,8 @@
+*[API]: Application Programming Interface
+*[APIs]: Application Programming Interfaces
+*[IT]: Information Technology
+*[JSON]: JavaScript Object Notation
+*[CLI]: Command Line Interface
+*[UI]: User Interface
+*[XML]: eXtensible Markup Language
+*[YAML]: YAML Ain't Markup Language

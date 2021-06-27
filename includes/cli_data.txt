@@ -1,0 +1,6 @@
+interface Ethernet1/10
+  ip access-group WEB-SERVER out
+!
+IP access list WEB-SERVER
+        20 permit icmp 192.168.2.0/24 192.168.5.3/32 
+!
