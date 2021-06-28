@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       LOCAL_PATH: config/
-      AWS_BUCKET: devasc-netconf
+      AWS_BUCKET: devasc-data-formats
     steps:
       - name: Checkout Code
         uses: actions/checkout@v2
