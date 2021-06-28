@@ -1,8 +1,10 @@
-# DEVASC Data Encoding Formats Hands-On
+# DEVASC Data Encoding Formats Hands-On Lab Guide
 
 ## :fontawesome-solid-laptop-code: Overview
 
 When we automate to IT systems, we get the fantastic benefit of _not_ having to either copy and paste configuration changes to dozens (maybe hundreds) of different systems or repeat the same click, click, click, click, click-through-the-UI marathon over, and over, and over..._every single time_ there's a need to make a bulk change :rage:.  To automate these sorts of workflows, it's important that we learn to write some form of automation-specific code.  To make that possible, it's essential that we know how to read and write the **data structures** that our code sends to and receives from the systems we automate.
+
+This guide will walk you through some hands-on exercises which help teach and practice and give you a place to practice using various **data encoding formats** with Python.  You'll get the most from these exercises if you have at least a little bit of exposure to Python fundamentals although we put the step-by-step directions together in a way that welcomes all experience levels.
 
 ---
 
@@ -42,65 +44,42 @@ Here is a real example of some data that a network device sent in response to a 
 
     === "CLI Response Output - Unstructured Data"
         ```text
-        --8<-- "includes/cli_data.txt"
+        --8<-- "includes/data_cli.txt"
         ```
 
     === "API Response Output - Structured Data"
 
         ```xml
-        --8<-- "includes/xml_data.xml"
+        --8<-- "includes/data_xml.xml"
         ```
 
 ---
 
-### :fontawesome-brands-python: Show Me How the Code is Different
+### :fontawesome-brands-python: Comparing the Code
 
-If you're thinking, _"Why would I ever want to deal with **structured data**? It looks like a mess!"_  Well, to put it simply, **structured data** is _way_ easier to work with **programmatically**.  Take a look at how we might parse both the CLI and API responses with some Pythone code:
+If you're thinking, _"Why would I ever want to deal with **structured data**? It looks like a mess!"_  Well, to put it simply, **structured data** is _way_ easier to work with **programmatically**.  Take a look at how we might parse both the CLI and API responses with some Python code:
 
-???+ note "Code Samples"
+???+ note "Example Code Exercise"
 
-    === "Parse the Unstructured (CLI) Response"
-        ```python linenums="1" hl_lines="6"
-        # CLI response
-        data = cli_response
+    The goal of this exercise is to parse the interface ID from each the CLI and API response data sets.  For reference, the correct result of a search for the interface ID is the text **1/10**.  These examples assume the CLI and API data are already available to the Python interpreter, in the variable with the name **`data`**.
 
-        # Regular expression search
-        import re
-        search_pattern = re.compile(r'^(\D+ \D+)([0-9]\/[0-9]{2})$')
-        search_result = search_pattern.search(data)
-        if search_result.group(2) is not None:
-            interface_name = search_result.group(2)
-        ```
+    - Even though the CLI response data is only a few lines long, the Python code to parse the interface ID from that data, with a regular expression, is lengthy and somewhat complex to read.
+    - By contrast, even though the API response data is lenghty, the Python code to parse the interface ID is short and far less complex to read.
 
-    === "Parsing the Structured (API) Response"
-        ```python linenums="1" hl_lines="5"
-        # API response
-        data = api_data['rpc_reply']
+    ??? example "Click to view the code examples"
 
-        # Extract the interface name
-        interface_name = data['acl']['interfaces']['interface']['id']
-        ```
+        === "Parse the Unstructured (CLI) Response"
+            ```python linenums="1" hl_lines="5-17 19 21-24"
+            --8<-- "includes/parse_unstructured.py"
+            ```
+    
+        === "Parsing the Structured (API) Response"
+            ```python linenums="1" hl_lines="5-8"
+            --8<-- "includes/parse_structured.py"
+            ```
 
 ---
 
-## abc
-
-abc
-
----
-
-## :fontawesome-solid-lightbulb: Overview
-
-This repo has several guided, hands-on exercises which will help you learn and practice how to use various data encoding formats with Python.  These exercises compliment the *Data Encoding Formats* presentation which is available in the Study Group files repository.
-
----
-
-## :fontawesome-solid-flask: Hands-On Lab Setup
-
-The **Lab Setup** section has step-by-step directions to help you deploy the learning materials using a guided, interactive Python tool called [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/getting_started/overview.html).
-
----
-
-## :fontawesome-solid-flag: Getting Started
+All right, that's enough reading for now.  It's time to get into the lab exercises and get some real practice.  If everything to this point makes perfect sense to you, great!  If not, don't worry because you're about to get a lot of hands-on repetitions with functional code.  [Click here to continue to the next section](sections/section_1.md "Hands-On Lab Setup").
 
 --8<-- "includes/glossary.txt"
