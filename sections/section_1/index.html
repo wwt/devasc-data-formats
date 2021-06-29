@@ -209,7 +209,7 @@
   
     <li class="md-tabs__item">
       <a href="./" class="md-tabs__link md-tabs__link--active">
-        Lab Setup
+        Lab Exercises
       </a>
     </li>
   
@@ -318,13 +318,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
-        Lab Setup
+        Lab Exercises
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Lab Setup" data-md-level="1">
+      <nav class="md-nav" aria-label="Lab Exercises" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Lab Setup
+          Lab Exercises
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -447,7 +447,7 @@
 <p>We provide instructions for three different lab setup options.  Choose the option that best suits your needs and then follow the step-by-step directions:</p>
 <details class="abstract" open="open"><summary>Lab Setup Options</summary><p><strong>Option #1:</strong> Auto-provision the environment in the WWT Programmability Foundations Lab.</p>
 <p><strong>Option #2:</strong> Run a pre-built Container in your own Docker runtime environment.</p>
-<p><strong>Option #3:</strong> Use the Included Visual Studio Code Development Container.</p>
+<p><strong>Option #3:</strong> Use the Visual Studio Code Development Container in the <a href="https://github.com/wwt/devasc-data-formats" target="_blank" title="DEVASC Data Formats Git Repository">Git Repository</a>.</p>
 <div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Option #1</label><div class="tabbed-content">
 <details class="example" open="open"><summary>Auto-provision the environment in the WWT Programmability Foundations Lab</summary><details class="todo" open="open"><summary>Step 1</summary><p>Launch a new copy of the <a href="https://www.wwt.com/lab/programmability-foundations-lab" target="_blank" title="WWT Programmability Foundations On-Demand Lab">WWT Programmability Foundations On-Demand Lab</a> and click <a href="https://www.wwt.com/my/labs" target="_blank" title="My WWT Labs">View Labs</a>:</p>
 <p><a href="../../images/pf_lab/1_launch_lab.png" target="_blank"><img alt="1_launch_lab" src="../../images/pf_lab/1_launch_lab.png" title="Launch a New Programmability Foundations Lab Instance" /></a></p>
@@ -613,17 +613,33 @@ docker rmi wwt01/devasc-data-formats
 </details>
 </div>
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Option #3</label><div class="tabbed-content">
-<details class="example" open="open"><summary>Use the Included Visual Studio Code Development Container</summary><div class="admonition attention">
+<details class="example" open="open"><summary>Use the Visual Studio Code Development Container in the Git Repository</summary><div class="admonition attention">
 <p class="admonition-title">Attention</p>
 <p>This option assumes your computer/development environment has the following software installed and in a functional state:</p>
 <ol>
-<li><a href="https://code.visualstudio.com/Download" target="_blank" title="Visual Studio Code Download">Visual Studio Code</a>.</li>
-<li><a href="https://git-scm.com/downloads &quot;Git Installer Download" target="_blank">Git version control</a>.</li>
-<li>A Docker runtime environment such as <a href="https://www.docker.com/products/docker-desktop" target="_blank" title="Docker Desktop for Windows or macOS">Docker Desktop for Windows or macOS</a>, <a href="https://hub.docker.com/search?offering=community&amp;operating_system=linux&amp;q=&amp;type=edition" target="_blank" title="Docker for Linux">Docker for Linux</a>, etc..</li>
+<li>
+<p><a href="https://code.visualstudio.com/Download" target="_blank" title="Visual Studio Code Download">Visual Studio Code</a> <mark><strong>version 1.5 or later</strong></mark>.</p>
+</li>
+<li>
+<p><a href="https://git-scm.com/downloads &quot;Git Installer Download" target="_blank">Git version control</a>.</p>
+</li>
+<li>
+<p>A Docker runtime environment such as <a href="https://www.docker.com/products/docker-desktop" target="_blank" title="Docker Desktop for Windows or macOS">Docker Desktop for Windows or macOS</a>, <a href="https://hub.docker.com/search?offering=community&amp;operating_system=linux&amp;q=&amp;type=edition" target="_blank" title="Docker for Linux">Docker for Linux</a>, etc..</p>
+<details class="danger"><summary>WWT Programmability Foundations On-Demand Lab Requirements</summary><p>If you intend to use these instructions with the <a href="https://www.wwt.com/lab/programmability-foundations-lab" target="_blank" title="WWT Programmability Foundations On-Demand Lab">WWT Programmability Foundations On-Demand Lab</a>, take note of the following advisories:</p>
+<ul>
+<li>
+<p>The <strong>Visual Studio Code</strong> installation on the <a href="https://www.wwt.com/lab/programmability-foundations-lab" target="_blank" title="WWT Programmability Foundations On-Demand Lab">WWT Programmability Foundations On-Demand Lab</a> <strong>requires an upgrade</strong> before it will successfully launch this development container.</p>
+</li>
+<li>
+<p>The <a href="https://www.wwt.com/lab/programmability-foundations-lab" target="_blank" title="WWT Programmability Foundations On-Demand Lab">WWT Programmability Foundations On-Demand Lab</a> <strong>does not have Git for Windows pre-installed</strong>.</p>
+</li>
+</ul>
+</details>
+</li>
 </ol>
 <p>The screenshots in the directions represent an example from a <strong>Microsoft Windows</strong> computer and the same procedures also work with <strong>macOS</strong> and <strong>Linux</strong>.</p>
 </div>
-<details class="todo" open="open"><summary>Step 1</summary><p>Clone the Git repository:</p>
+<details class="todo" open="open"><summary>Step 1</summary><p>Clone the <a href="https://github.com/wwt/devasc-data-formats" target="_blank" title="DEVASC Data Formats Git Repository">Git Repository</a>:</p>
 <div class="highlight"><pre><span></span><code>git clone https://github.com/wwt/devasc-data-formats.git
 </code></pre></div>
 <p>// Insert image</p>
@@ -631,23 +647,25 @@ docker rmi wwt01/devasc-data-formats
 <details class="todo"><summary>Step 2</summary><p>Open Visual Studio Code:</p>
 <p>// Insert image</p>
 </details>
-<details class="todo"><summary>Step 3</summary><p>Install the Remote Development </p>
+<details class="todo"><summary>Step 3</summary><p>Install the Remote Development Pack Extension</p>
+<div class="highlight"><pre><span></span><code>ms-vscode-remote.vscode-remote-extensionpack
+</code></pre></div>
 <p>// Insert image</p>
 </details>
-<details class="todo"><summary>Step 3</summary><p>Initiate the Development Container Startup Process:</p>
+<details class="todo"><summary>Step 4</summary><p>Initiate the Development Container Startup Process:</p>
 <p>// Insert image</p>
 </details>
-<details class="todo"><summary>Step 3</summary><p>Choose the Path to the cloned Git Repository:</p>
+<details class="todo"><summary>Step 5</summary><p>Choose the Path to the cloned Git Repository:</p>
 <p>// Insert image</p>
 </details>
-<details class="todo"><summary>Step 4</summary><ol>
+<details class="todo"><summary>Step 6</summary><ol>
 <li>Open a web browser on your Docker runtime host.</li>
 <li>Navigate to the Container's <strong>JupyterLab server</strong> at <a href="http://localhost:8888" target="_blank" title="JupyterLab Server">http://localhost:8888</a>.</li>
 <li>Double-click on the <strong>part_i_python</strong> folder in the navigation pane.</li>
 </ol>
 <p>// Insert image</p>
 </details>
-<details class="todo"><summary>Step 5</summary><p>Open the file <strong>python.ipynb</strong> and begin working through the step-by-step instructions in the main pane:</p>
+<details class="todo"><summary>Step 7</summary><p>Open the file <strong>python.ipynb</strong> and begin working through the step-by-step instructions in the main pane:</p>
 <p>// Insert image</p>
 </details>
 <details class="help"><summary>Lab Environment Shutdown</summary><p>Close the Development Environment Container</p>
@@ -657,8 +675,6 @@ docker rmi wwt01/devasc-data-formats
 </div>
 </div>
 </details>
-<p>// VS code development environment</p>
-<p>// contributions</p>
                 
               
               
