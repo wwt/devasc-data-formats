@@ -73,7 +73,7 @@ function docker_status() {
             Write-Host "Docker Desktop process not running, attempting restart..." -NoNewline -ForegroundColor Yellow
             Start-Sleep 15
             Write-Host "done." -ForegroundColor Yellow
-            Write-Host
+            Write-Host ""
 
             handle_error("Docker Desktop process was not running, restart automatically attempted. `nPlease try again.  If the problem persists, launch a new copy of the lab.")
         }
