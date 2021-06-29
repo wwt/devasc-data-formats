@@ -20,6 +20,11 @@ COPY requirements/ requirements/
 RUN python -m pip install --upgrade pip && \
     python -m pip install -r requirements/requirements.txt
 
+# Copy source files to Image
+COPY docs/ docs/
+COPY includes/ includes/
+COPY lab/ lab/
+
 # Run script to launch server services
 ENTRYPOINT [ "./requirements/server-launch.sh" ]
 
