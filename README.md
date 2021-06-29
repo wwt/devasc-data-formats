@@ -1,6 +1,6 @@
 # Cisco DevNet Associate Data Encoding Formats Hands-On Lab Guide
 
-![cisco-devnet-specialist](docs/logos/cisco-devnet-associate.png "Cisco DevNet Associate Logo")
+![cisco-devnet-specialist](docs/images/logos/cisco-devnet-associate.png "Cisco DevNet Associate Logo")
 
 ## Overview
 
