@@ -39,7 +39,7 @@ function display_intro() {
     Write-Host ""
     write-Host $FRAME
     Write-Host "** Setting up the Data Formats Lab **" -ForegroundColor Green
-    Write-Host "** This will take 5-10 minutes, please wait **" -ForegroundColor Green
+    Write-Host "** This will take a few minutes, please wait **" -ForegroundColor Green
     write-Host $FRAME
     Write-Host ""
 
@@ -134,7 +134,6 @@ function setup_docker() {
 function run_jupyter_launcher() {
     # Download and execute Jupyter Launcher
     Write-Host "Setting up JupyterLab..." -ForegroundColor Green
-    Write-Host ""
     try {
         # Download .repo file
         Invoke-WebRequest -Uri $REPO_FILE_URI -OutFile $REPO_FILE
@@ -144,7 +143,6 @@ function run_jupyter_launcher() {
 
         # Run Jupyter Launcher Script
         Invoke-Expression .\$JUPYTER_SCRIPT
-        Write-Host ""
         Write-Host "...JupyterLab setup complete." -ForegroundColor Green
         Write-Host ""
     }
