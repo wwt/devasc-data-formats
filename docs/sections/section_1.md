@@ -318,7 +318,3 @@ We provide instructions for three different lab setup options.  Choose the optio
                 Close the Development Environment Container
 
                 // Insert image
-
-// VS code development environment
-
-// contributions
