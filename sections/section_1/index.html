@@ -530,7 +530,7 @@
 <details class="todo"><summary>Step 11</summary><p>Open the <strong>part_i_python</strong> folder:</p>
 <p><a href="../../images/pf_lab/11_jupyter_nav_3.png" target="_blank"><img alt="11_jupyter_nav_3" src="../../images/pf_lab/11_jupyter_nav_3.png" title="Open the 'part_i_python' folder" /></a></p>
 </details>
-<details class="todo"><summary>Step 12</summary><p>Open the file <strong>python.ipynb</strong> and begin working through the step-by-step instructions in the main pane:</p>
+<details class="todo"><summary>Step 12</summary><p>Open the file <strong>python.ipynb</strong> and follow the step-by-step instructions in the main pane:</p>
 <p><a href="../../images/pf_lab/12_jupyter_nav_4.png" target="_blank"><img alt="12_jupyter_nav_4" src="../../images/pf_lab/12_jupyter_nav_4.png" title="Open the file 'python.ipynb'" /></a></p>
 </details>
 <details class="help"><summary>Lab Restart Instructions</summary><p>The lab setup process creates a shotcut on the Windows desktop which will help you restore the lab environment, in the event the JupyterLab browser tab closes, Windows restarts, etc.</p>
@@ -625,51 +625,82 @@ docker rmi wwt01/devasc-data-formats
 </li>
 <li>
 <p>A Docker runtime environment such as <a href="https://www.docker.com/products/docker-desktop" target="_blank" title="Docker Desktop for Windows or macOS">Docker Desktop for Windows or macOS</a>, <a href="https://hub.docker.com/search?offering=community&amp;operating_system=linux&amp;q=&amp;type=edition" target="_blank" title="Docker for Linux">Docker for Linux</a>, etc..</p>
-<details class="danger"><summary>WWT Programmability Foundations On-Demand Lab Requirements</summary><p>If you intend to use these instructions with the <a href="https://www.wwt.com/lab/programmability-foundations-lab" target="_blank" title="WWT Programmability Foundations On-Demand Lab">WWT Programmability Foundations On-Demand Lab</a>, take note of the following advisories:</p>
-<ul>
-<li>
-<p>The <strong>Visual Studio Code</strong> installation on the <a href="https://www.wwt.com/lab/programmability-foundations-lab" target="_blank" title="WWT Programmability Foundations On-Demand Lab">WWT Programmability Foundations On-Demand Lab</a> <strong>requires an upgrade</strong> before it will successfully launch this development container.</p>
-</li>
-<li>
-<p>The <a href="https://www.wwt.com/lab/programmability-foundations-lab" target="_blank" title="WWT Programmability Foundations On-Demand Lab">WWT Programmability Foundations On-Demand Lab</a> <strong>does not have Git for Windows pre-installed</strong>.</p>
-</li>
-</ul>
-</details>
 </li>
 </ol>
-<p>The screenshots in the directions represent an example from a <strong>Microsoft Windows</strong> computer and the same procedures also work with <strong>macOS</strong> and <strong>Linux</strong>.</p>
+<p>The screenshots in the directions represent an example from a <strong>macOS</strong> computer and the same procedures also work with <strong>Microsoft Windows</strong> and <strong>Linux</strong> computers.</p>
 </div>
-<details class="todo" open="open"><summary>Step 1</summary><p>Clone the <a href="https://github.com/wwt/devasc-data-formats" target="_blank" title="DEVASC Data Formats Git Repository">Git Repository</a>:</p>
+<details class="todo" open="open"><summary>Step 1</summary><p>Clone the <a href="https://github.com/wwt/devasc-data-formats" target="_blank" title="DEVASC Data Formats Git Repository">Git Repository</a> to your development computer with the following command:</p>
 <div class="highlight"><pre><span></span><code>git clone https://github.com/wwt/devasc-data-formats.git
 </code></pre></div>
-<p>// Insert image</p>
+<p><a href="../../images/dev_container/1_clone_repo.png" target="_blank"><img alt="1_clone_repo" src="../../images/dev_container/1_clone_repo.png" title="Clone the DEVASC Data Formats Git Repository" /></a></p>
 </details>
-<details class="todo"><summary>Step 2</summary><p>Open Visual Studio Code:</p>
-<p>// Insert image</p>
-</details>
-<details class="todo"><summary>Step 3</summary><p>Install the Remote Development Pack Extension</p>
+<details class="todo"><summary>Step 2</summary><p>Install the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack" target="_blank" title="Visual Studio Code Remote Development Extension Pack">Visual Studio Code Remote Development Extension Pack</a>:</p>
+<ol>
+<li>Open Visual Studio Code.</li>
+<li>Click the <strong>Extensions</strong> icon.</li>
+<li>
+<p>Copy the <strong>Remote Development Pack Extension ID string</strong> to your clipboard:</p>
 <div class="highlight"><pre><span></span><code>ms-vscode-remote.vscode-remote-extensionpack
 </code></pre></div>
-<p>// Insert image</p>
+</li>
+<li>
+<p>Paste the <strong>Remote Development Pack Extension ID string</strong> in the search box.</p>
+</li>
+<li>Click one of the <strong>Install</strong> buttons.</li>
+</ol>
+<p><a href="../../images/dev_container/2_install_remote_dev_extension.png" target="_blank"><img alt="2_install_remote_dev_extension" src="../../images/dev_container/2_install_remote_dev_extension.png" title="Install the VS Code Remote Development Container Extension" /></a></p>
 </details>
-<details class="todo"><summary>Step 4</summary><p>Initiate the Development Container Startup Process:</p>
-<p>// Insert image</p>
+<details class="todo"><summary>Step 3</summary><p>Open the Git Repository in a Development Container:</p>
+<ol>
+<li>Click the <strong>Remote Development</strong> icon in the lower-left corner of the VS Code window.</li>
+<li>From the drop menu, choose the option to <strong>Open Folder in Container</strong>.</li>
+</ol>
+<p><a href="../../images/dev_container/3_open_remote_dev_container.png" target="_blank"><img alt="3_open_remote_dev_container" src="../../images/dev_container/3_open_remote_dev_container.png" title="Open the Git Repository in a Development Container" /></a></p>
 </details>
-<details class="todo"><summary>Step 5</summary><p>Choose the Path to the cloned Git Repository:</p>
-<p>// Insert image</p>
+<details class="todo"><summary>Step 4</summary><p>Locate and select the Git repository folder on your development computer:</p>
+<p><a href="../../images/dev_container/4_choose_git_repo.png" target="_blank"><img alt="4_choose_git_repo" src="../../images/dev_container/4_choose_git_repo.png" title="Locate and Select the Git Repository Folder" /></a></p>
 </details>
-<details class="todo"><summary>Step 6</summary><ol>
-<li>Open a web browser on your Docker runtime host.</li>
-<li>Navigate to the Container's <strong>JupyterLab server</strong> at <a href="http://localhost:8888" target="_blank" title="JupyterLab Server">http://localhost:8888</a>.</li>
+<details class="todo"><summary>Step 5</summary><p>Monitor the Development Environment build process:</p>
+<ol>
+<li>Click the <strong>show log</strong> link in the lower-right corner of the VS Code window.</li>
+<li>Observe the console output as the Container builds and starts.</li>
+</ol>
+<div class="admonition attention">
+<p class="admonition-title">Notice</p>
+<ul>
+<li>The initial build process may take 5-10 minutes to complete.</li>
+<li>Subsequent activations will only take a few seconds.</li>
+</ul>
+</div>
+<p><a href="../../images/dev_container/5_monitor_dev_container_build.png" target="_blank"><img alt="5_monitor_dev_container_build" src="../../images/dev_container/5_monitor_dev_container_build.png" title="Monitor the Development Environment Build Process" /></a></p>
+</details>
+<details class="todo"><summary>Step 6</summary><p>Observe the Development Environment complete activation:</p>
+<ol>
+<li>The Git <strong>repository file tree</strong> will appear on the left side of the VS Code Window.</li>
+<li>The <strong>VS Code terminal window</strong> will display <strong>JupyterLab</strong> activation information.</li>
+</ol>
+<div class="admonition attention">
+<p class="admonition-title">Notice</p>
+<p>You may safely close the <strong>VS Code Terminal Window</strong> or toggle its visibility with the <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-grave">`</kbd></span> key sequence.</p>
+</div>
+<p><a href="../../images/dev_container/6_dev_container_active.png" target="_blank"><img alt="6_dev_container_active" src="../../images/dev_container/6_dev_container_active.png" title="Observe the Activated Development Environment" /></a></p>
+</details>
+<details class="todo"><summary>Step 7</summary><ol>
+<li>Open a web browser on your development computer.</li>
+<li>Navigate to the Development Container's <strong>JupyterLab server</strong> at <a href="http://localhost:8888" target="_blank" title="JupyterLab Server">http://localhost:8888</a>.</li>
 <li>Double-click on the <strong>part_i_python</strong> folder in the navigation pane.</li>
 </ol>
-<p>// Insert image</p>
+<p><a href="../../images/dev_container/7_jupyter_nav_1.png" target="_blank"><img alt="7_jupyter_nav_1" src="../../images/dev_container/7_jupyter_nav_1.png" title="Open the 'part_i_python' folder" /></a></p>
 </details>
-<details class="todo"><summary>Step 7</summary><p>Open the file <strong>python.ipynb</strong> and begin working through the step-by-step instructions in the main pane:</p>
-<p>// Insert image</p>
+<details class="todo"><summary>Step 8</summary><p>Open the file <strong>python.ipynb</strong> and follow the step-by-step instructions in the main pane:</p>
+<p><a href="../../images/dev_container/8_jupyter_nav_2.png" target="_blank"><img alt="8_jupyter_nav_2" src="../../images/dev_container/8_jupyter_nav_2.png" title="Open the file 'python.ipynb'" /></a></p>
 </details>
-<details class="help"><summary>Lab Environment Shutdown</summary><p>Close the Development Environment Container</p>
-<p>// Insert image</p>
+<details class="help"><summary>Development Environment Shutdown</summary><p>You may close the <strong>Development Environment Container</strong> without losing any of your lab progress from the Visual Studio Code Development Environment window:</p>
+<ol>
+<li>Click the <strong>Remote Development</strong> icon in the lower-left corner of the VS Code window.</li>
+<li>From the drop menu, choose the option to <strong>Close Remote Connection</strong>.</li>
+</ol>
+<p><a href="../../images/dev_container/9_close_remote_dev_container.png" target="_blank"><img alt="9_close_remote_dev_container" src="../../images/dev_container/9_close_remote_dev_container.png" title="Close the Development Environment Container" /></a></p>
 </details>
 </details>
 </div>
