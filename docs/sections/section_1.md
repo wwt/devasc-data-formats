@@ -30,7 +30,7 @@ We provide instructions for three different lab setup options.  Choose the optio
 
     **Option #2:** Run a pre-built Container in your own Docker runtime environment.
 
-    **Option #3:** Build, from source, and run a Container in your own Docker runtime environment.
+    **Option #3:** Use the Included Visual Studio Code Development Container.
 
     === "Option #1"
 
@@ -165,7 +165,23 @@ We provide instructions for three different lab setup options.  Choose the optio
 
     === "Option #2"
 
+        ???+ example "Run a pre-built Container in your own Docker runtime environment"
+
+            ???+ todo "Step 1"
+
+                Launch a new copy of the [WWT Programmability Foundations On-Demand Lab](https://www.wwt.com/lab/programmability-foundations-lab "WWT Programmability Foundations On-Demand Lab"){target=_blank} and click [View Labs](https://www.wwt.com/my/labs "My WWT Labs"){target=_blank}:
+
+                [![1_launch_lab](../images/pf_lab/1_launch_lab.png "Launch a New Programmability Foundations Lab Instance")](../images/pf_lab/1_launch_lab.png){target=_blank}
+
     === "Option #3"
+
+        ???+ example "Use the Included Visual Studio Code Development Container"
+
+            ???+ todo "Step 1"
+
+                Launch a new copy of the [WWT Programmability Foundations On-Demand Lab](https://www.wwt.com/lab/programmability-foundations-lab "WWT Programmability Foundations On-Demand Lab"){target=_blank} and click [View Labs](https://www.wwt.com/my/labs "My WWT Labs"){target=_blank}:
+
+                [![1_launch_lab](../images/pf_lab/1_launch_lab.png "Launch a New Programmability Foundations Lab Instance")](../images/pf_lab/1_launch_lab.png){target=_blank}
 
 Choose the appropriate instructions for your Docker environment to get started:
 
