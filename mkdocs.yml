@@ -4,7 +4,7 @@ site_url: "https://wwt.github.io/devasc-data-formats"
 nav:
   - Home:
     - About: index.md
-  - Lab Setup:
+  - Lab Exercises:
     - Hands-On Lab Setup: sections/section_1.md
 
 # Repository
