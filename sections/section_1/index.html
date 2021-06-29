@@ -436,7 +436,12 @@
 <p>A web browser with <a href="https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html#supported-browsers" target="_blank" title="JupyterLab Supported Browsers">JupyterLab support</a>.</p>
 </li>
 </ol>
-<p>You may run the lab Docker Container in either the <a href="https://www.wwt.com/lab/programmability-foundations-lab" target="_blank" title="WWT Programmability Foundations On-Demand Lab">WWT Programmability Foundations On-Demand Lab</a> or in your own Docker environment.</p>
+<p>You may run the lab Docker Container in:</p>
+<ul>
+<li>The <a href="https://www.wwt.com/lab/programmability-foundations-lab" target="_blank" title="WWT Programmability Foundations On-Demand Lab">WWT Programmability Foundations On-Demand Lab</a></li>
+<li>Your own Docker environment.</li>
+<li>A Visual Studio Code Development Container</li>
+</ul>
 <hr />
 <h2 id="lab-setup-instructions"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3v2a2 2 0 0 1 2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 1 2-2V3H3m4 6h3v1H7V9m0 2h3v1H7v-1m3 5H7v-1h3v1m2-2H7v-1h5v1m0-6H7V7h5v1z"/></svg></span> Lab Setup Instructions<a class="headerlink" href="#lab-setup-instructions" title="Permanent link">&para;</a></h2>
 <p>We provide instructions for three different lab setup options.  Choose the option that best suits your needs and then follow the step-by-step directions:</p>
@@ -541,33 +546,117 @@
 </details>
 </div>
 <input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2">Option #2</label><div class="tabbed-content">
-<details class="example" open="open"><summary>Run a pre-built Container in your own Docker runtime environment</summary><details class="todo" open="open"><summary>Step 1</summary><p>Launch a new copy of the <a href="https://www.wwt.com/lab/programmability-foundations-lab" target="_blank" title="WWT Programmability Foundations On-Demand Lab">WWT Programmability Foundations On-Demand Lab</a> and click <a href="https://www.wwt.com/my/labs" target="_blank" title="My WWT Labs">View Labs</a>:</p>
-<p><a href="../../images/pf_lab/1_launch_lab.png" target="_blank"><img alt="1_launch_lab" src="../../images/pf_lab/1_launch_lab.png" title="Launch a New Programmability Foundations Lab Instance" /></a></p>
+<details class="example" open="open"><summary>Run a pre-built Container in your own Docker runtime environment</summary><div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<ul>
+<li>This option assumes you have an operational Docker runtime environment and that your Docker daemon can connect to and download images from <a href="https://hub.docker.com/repository/docker/wwt01/devasc-data-formats &quot;Lab Image on Docker Hub" target="_blank">Docker Hub</a>.</li>
+<li>The screenshots in the directions represent an example from a <strong>macOS Terminal</strong> and the same commands and procedures also work with <strong>Windows PowerShell</strong>.</li>
+</ul>
+</div>
+<details class="todo" open="open"><summary>Step 1</summary><ol>
+<li>Copy the following command to your clipboard.</li>
+<li>Open a terminal shell on the same system as your Docker runtime environment.</li>
+<li>Paste the command into your terminal shell.</li>
+<li>Run the command.</li>
+</ol>
+<div class="highlight"><pre><span></span><code>docker run -itp <span class="m">8888</span>:8888 --name data-formats wwt01/devasc-data-formats
+</code></pre></div>
+<details class="help"><summary>Docker Command Details</summary><p>The Docker Command performs the following actions:</p>
+<ol>
+<li>Downloas the <strong>wwt01/devasc-data-formats</strong> Docker Image from <a href="https://hub.docker.com/repository/docker/wwt01/devasc-data-formats &quot;Lab Image on Docker Hub" target="_blank">Docker Hub</a>.</li>
+<li>Creates a new Docker Container with the name <strong>data-formats</strong></li>
+<li>Attaches to the Container shell.</li>
+<li>Starts a <strong>JupyterLab</strong> server in the Container on <strong>TCP port 8888</strong>.</li>
+<li>Forwards incoming connections to your computer on (<strong>localhost/127.0.0.1)</strong> on <strong>TCP port 8888</strong> to the <strong>JupyterLab</strong> server in the Container.</li>
+</ol>
+</details>
+<p><a href="../../images/docker_hub/1_docker_run.png" target="_blank"><img alt="1_docker_run" src="../../images/docker_hub/1_docker_run.png" title="Docker Run Command" /></a></p>
+</details>
+<details class="todo"><summary>Step 2</summary><p>Look for the following output to confirm the <strong>JupyterLab</strong> server is online and ready for incoming connections:</p>
+<p><a href="../../images/docker_hub/2_jupyter_started.png" target="_blank"><img alt="2_jupyter_started" src="../../images/docker_hub/2_jupyter_started.png" title="Operational JupyterLab Server Output" /></a></p>
+</details>
+<details class="todo"><summary>Step 3</summary><ol>
+<li>Open a web browser on your Docker runtime host.</li>
+<li>Navigate to the Container's <strong>JupyterLab server</strong> at <a href="http://localhost:8888" target="_blank" title="JupyterLab Server">http://localhost:8888</a>.</li>
+<li>Double-click on the <strong>part_i_python</strong> folder in the navigation pane.</li>
+</ol>
+<p><a href="../../images/docker_hub/3_open_python_folder.png" target="_blank"><img alt="3_open_python_folder" src="../../images/docker_hub/3_open_python_folder.png" title="Open the 'part_i_python' folder" /></a></p>
+</details>
+<details class="todo"><summary>Step 4</summary><p>Open the file <strong>python.ipynb</strong> and begin working through the step-by-step instructions in the main pane:</p>
+<p><a href="../../images/docker_hub/4_open_python_notebook.png" target="_blank"><img alt="4_open_python_notebook" src="../../images/docker_hub/4_open_python_notebook.png" title="Open the file 'python.ipynb'" /></a></p>
+</details>
+<details class="help"><summary>Lab Environment Shutdown and Restart</summary><ul>
+<li>To shutdown the lab environment, return to your terminal window and press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span> twice, <strong>within 5 seconds</strong>.</li>
+</ul>
+<p><a href="../../images/docker_hub/5_stop_jupyter.png" target="_blank"><img alt="5_stop_jupyter" src="../../images/docker_hub/5_stop_jupyter.png" title="Stop the JupyterLab Server" /></a></p>
+</details>
+<details class="note"><summary>Lab Environment Docker Command Reference</summary><p>Use the following commands to manage your Docker lab environment:</p>
+<ul>
+<li>Restart an existing lab environment Container (restores previous lab progress):</li>
+</ul>
+<div class="highlight"><pre><span></span><code>docker start data-formats
+</code></pre></div>
+<ul>
+<li>Delete an existing lab environment Container (removes previous lab progress):</li>
+</ul>
+<div class="highlight"><pre><span></span><code>docker stop data-formats
+docker rm data-formats
+</code></pre></div>
+<ul>
+<li>Remove the Docker Image:</li>
+</ul>
+<div class="highlight"><pre><span></span><code>docker stop data-formats
+docker rm data-formats
+docker rmi wwt01/devasc-data-formats
+</code></pre></div>
 </details>
 </details>
 </div>
 <input id="__tabbed_1_3" name="__tabbed_1" type="radio" /><label for="__tabbed_1_3">Option #3</label><div class="tabbed-content">
-<details class="example" open="open"><summary>Use the Included Visual Studio Code Development Container</summary><details class="todo" open="open"><summary>Step 1</summary><p>Launch a new copy of the <a href="https://www.wwt.com/lab/programmability-foundations-lab" target="_blank" title="WWT Programmability Foundations On-Demand Lab">WWT Programmability Foundations On-Demand Lab</a> and click <a href="https://www.wwt.com/my/labs" target="_blank" title="My WWT Labs">View Labs</a>:</p>
-<p><a href="../../images/pf_lab/1_launch_lab.png" target="_blank"><img alt="1_launch_lab" src="../../images/pf_lab/1_launch_lab.png" title="Launch a New Programmability Foundations Lab Instance" /></a></p>
-</details>
-</details>
+<details class="example" open="open"><summary>Use the Included Visual Studio Code Development Container</summary><div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>This option assumes your computer/development environment has the following software installed and in a functional state:</p>
+<ol>
+<li><a href="https://code.visualstudio.com/Download" target="_blank" title="Visual Studio Code Download">Visual Studio Code</a>.</li>
+<li><a href="https://git-scm.com/downloads &quot;Git Installer Download" target="_blank">Git version control</a>.</li>
+<li>A Docker runtime environment such as <a href="https://www.docker.com/products/docker-desktop" target="_blank" title="Docker Desktop for Windows or macOS">Docker Desktop for Windows or macOS</a>, <a href="https://hub.docker.com/search?offering=community&amp;operating_system=linux&amp;q=&amp;type=edition" target="_blank" title="Docker for Linux">Docker for Linux</a>, etc..</li>
+</ol>
+<p>The screenshots in the directions represent an example from a <strong>Microsoft Windows</strong> computer and the same procedures also work with <strong>macOS</strong> and <strong>Linux</strong>.</p>
 </div>
-</div>
-</details>
-<p>Choose the appropriate instructions for your Docker environment to get started:</p>
-<p>// lab components overview</p>
-<div class="highlight"><pre><span></span><code>// include info about PF lab and advise that their own computer can work
+<details class="todo" open="open"><summary>Step 1</summary><p>Clone the Git repository:</p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/wwt/devasc-data-formats.git
 </code></pre></div>
-<p>// PF lab launch instructions
-    1. access PF lab
-    2. confirm docker is running
-    3. Copy/paste PowerShell command
-    4. Open exercises</p>
-<p>// Non-PF lab launch instructions
-    1. Run docker container
-    2. Launch browser
-    3. Open exercises</p>
-<p>// build from source</p>
+<p>// Insert image</p>
+</details>
+<details class="todo"><summary>Step 2</summary><p>Open Visual Studio Code:</p>
+<p>// Insert image</p>
+</details>
+<details class="todo"><summary>Step 3</summary><p>Install the Remote Development </p>
+<p>// Insert image</p>
+</details>
+<details class="todo"><summary>Step 3</summary><p>Initiate the Development Container Startup Process:</p>
+<p>// Insert image</p>
+</details>
+<details class="todo"><summary>Step 3</summary><p>Choose the Path to the cloned Git Repository:</p>
+<p>// Insert image</p>
+</details>
+<details class="todo"><summary>Step 4</summary><ol>
+<li>Open a web browser on your Docker runtime host.</li>
+<li>Navigate to the Container's <strong>JupyterLab server</strong> at <a href="http://localhost:8888" target="_blank" title="JupyterLab Server">http://localhost:8888</a>.</li>
+<li>Double-click on the <strong>part_i_python</strong> folder in the navigation pane.</li>
+</ol>
+<p>// Insert image</p>
+</details>
+<details class="todo"><summary>Step 5</summary><p>Open the file <strong>python.ipynb</strong> and begin working through the step-by-step instructions in the main pane:</p>
+<p>// Insert image</p>
+</details>
+<details class="help"><summary>Lab Environment Shutdown</summary><p>Close the Development Environment Container</p>
+<p>// Insert image</p>
+</details>
+</details>
+</div>
+</div>
+</details>
 <p>// VS code development environment</p>
 <p>// contributions</p>
                 
