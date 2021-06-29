@@ -293,23 +293,27 @@ We provide instructions for three different lab setup options.  Choose the optio
 
             ??? todo "Step 3"
 
-                Install the Remote Development 
+                Install the Remote Development Pack Extension
+
+                ```text
+                ms-vscode-remote.vscode-remote-extensionpack
+                ```
 
                 // Insert image
 
-            ??? todo "Step 3"
+            ??? todo "Step 4"
 
                 Initiate the Development Container Startup Process:
 
                 // Insert image
 
-            ??? todo "Step 3"
+            ??? todo "Step 5"
 
                 Choose the Path to the cloned Git Repository:
 
                 // Insert image
 
-            ??? todo "Step 4"
+            ??? todo "Step 6"
 
                 1. Open a web browser on your Docker runtime host.
                 2. Navigate to the Container's **JupyterLab server** at [http://localhost:8888](http://localhost:8888 "JupyterLab Server"){target=_blank}.
@@ -317,7 +321,7 @@ We provide instructions for three different lab setup options.  Choose the optio
 
                 // Insert image
 
-            ??? todo "Step 5"
+            ??? todo "Step 7"
 
                 Open the file **python.ipynb** and begin working through the step-by-step instructions in the main pane:
 
