@@ -16,7 +16,7 @@
     
     
       
-        <title>Outline - WWT - Cisco DevNet DEVASC Data Encoding Formats</title>
+        <title>About - WWT - Cisco DevNet DEVASC Data Encoding Formats</title>
       
     
     
@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#wwt-cisco-devnet-associate-study-group-data-encoding-formats" class="md-skip">
+        <a href="#devasc-data-encoding-formats-hands-on-lab-guide" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Outline
+              About
             
           </span>
         </div>
@@ -209,7 +209,7 @@
   
     <li class="md-tabs__item">
       <a href="sections/section_1/" class="md-tabs__link">
-        Section 1
+        Lab Setup
       </a>
     </li>
   
@@ -301,12 +301,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Outline
+          About
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="." class="md-nav__link md-nav__link--active">
-        Outline
+        About
       </a>
       
         
@@ -324,30 +324,76 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#about" class="md-nav__link">
-    About
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#overview" class="md-nav__link">
-    Overview
+     Overview
   </a>
+  
+    <nav class="md-nav" aria-label=" Overview">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unstructured-vs-structured-data" class="md-nav__link">
+     Unstructured vs Structured Data
+  </a>
+  
+    <nav class="md-nav" aria-label=" Unstructured vs Structured Data">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#data-meant-for-humans-to-read" class="md-nav__link">
+    Data Meant for Humans to Read
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-meant-for-computers-to-read" class="md-nav__link">
+    Data Meant for Computers to Read
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#apis-and-data-formats" class="md-nav__link">
+    APIs and Data Formats
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#hands-on-lab-setup" class="md-nav__link">
-    Hands-On Lab Setup
+  <a href="#a-practical-example" class="md-nav__link">
+     A Practical Example
+  </a>
+  
+    <nav class="md-nav" aria-label=" A Practical Example">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-side-by-side-comparision" class="md-nav__link">
+     A Side-by-Side Comparision
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#getting-started" class="md-nav__link">
-    Getting Started
+        
+          <li class="md-nav__item">
+  <a href="#comparing-the-code" class="md-nav__link">
+     Comparing the Code
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -379,13 +425,13 @@
         <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" data-md-state="indeterminate" type="checkbox" id="__nav_2" checked>
       
       <label class="md-nav__link" for="__nav_2">
-        Section 1
+        Lab Setup
         <span class="md-nav__icon md-icon"></span>
       </label>
-      <nav class="md-nav" aria-label="Section 1" data-md-level="1">
+      <nav class="md-nav" aria-label="Lab Setup" data-md-level="1">
         <label class="md-nav__title" for="__nav_2">
           <span class="md-nav__icon md-icon"></span>
-          Section 1
+          Lab Setup
         </label>
         <ul class="md-nav__list" data-md-scrollfix>
           
@@ -395,7 +441,7 @@
   
     <li class="md-nav__item">
       <a href="sections/section_1/" class="md-nav__link">
-        Network Programmability Foundation
+        Hands-On Lab Setup
       </a>
     </li>
   
@@ -420,17 +466,184 @@
               
                 
                 
-                <h1 id="wwt-cisco-devnet-associate-study-group-data-encoding-formats">WWT - Cisco DevNet Associate Study Group Data Encoding Formats<a class="headerlink" href="#wwt-cisco-devnet-associate-study-group-data-encoding-formats" title="Permanent link">&para;</a></h1>
-<h2 id="about">About<a class="headerlink" href="#about" title="Permanent link">&para;</a></h2>
-<p>// TODO</p>
+                <h1 id="devasc-data-encoding-formats-hands-on-lab-guide">DEVASC Data Encoding Formats Hands-On Lab Guide<a class="headerlink" href="#devasc-data-encoding-formats-hands-on-lab-guide" title="Permanent link">&para;</a></h1>
+<h2 id="overview"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M255.03 261.65c6.25 6.25 16.38 6.25 22.63 0l11.31-11.31c6.25-6.25 6.25-16.38 0-22.63L253.25 192l35.71-35.72c6.25-6.25 6.25-16.38 0-22.63l-11.31-11.31c-6.25-6.25-16.38-6.25-22.63 0l-58.34 58.34c-6.25 6.25-6.25 16.38 0 22.63l58.35 58.34zm96.01-11.3 11.31 11.31c6.25 6.25 16.38 6.25 22.63 0l58.34-58.34c6.25-6.25 6.25-16.38 0-22.63l-58.34-58.34c-6.25-6.25-16.38-6.25-22.63 0l-11.31 11.31c-6.25 6.25-6.25 16.38 0 22.63L386.75 192l-35.71 35.72c-6.25 6.25-6.25 16.38 0 22.63zM624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg></span> Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
+<p>When we automate to <abbr title="Information Technology">IT</abbr> systems, we get the fantastic benefit of <em>not</em> having to either copy and paste configuration changes to dozens (maybe hundreds) of different systems or repeat the same click, click, click, click, click-through-the-<abbr title="User Interface">UI</abbr> marathon over, and over, and over...<em>every single time</em> there's a need to make a bulk change <img alt="😡" class="twemoji" src="https://twemoji.maxcdn.com/v/latest/svg/1f621.svg" title=":rage:" />.  To automate these sorts of workflows, it's important that we learn to write some form of automation-specific code.  To make that possible, it's essential that we know how to read and write the <strong>data structures</strong> that our code sends to and receives from the systems we automate.</p>
+<p>This guide will walk you through some hands-on exercises which help teach and practice and give you a place to practice using various <strong>data encoding formats</strong> with Python.  You'll get the most from these exercises if you have at least a little bit of exposure to Python fundamentals although we put the step-by-step directions together in a way that welcomes all experience levels.</p>
 <hr />
-<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">&para;</a></h2>
-<p>// TODO</p>
+<h3 id="unstructured-vs-structured-data"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="M384 121.941V128H256V0h6.059c6.365 0 12.47 2.529 16.971 7.029l97.941 97.941A24.005 24.005 0 0 1 384 121.941zM248 160c-13.2 0-24-10.8-24-24V0H24C10.745 0 0 10.745 0 24v464c0 13.255 10.745 24 24 24h336c13.255 0 24-10.745 24-24V160H248zM123.206 400.505a5.4 5.4 0 0 1-7.633.246l-64.866-60.812a5.4 5.4 0 0 1 0-7.879l64.866-60.812a5.4 5.4 0 0 1 7.633.246l19.579 20.885a5.4 5.4 0 0 1-.372 7.747L101.65 336l40.763 35.874a5.4 5.4 0 0 1 .372 7.747l-19.579 20.884zm51.295 50.479-27.453-7.97a5.402 5.402 0 0 1-3.681-6.692l61.44-211.626a5.402 5.402 0 0 1 6.692-3.681l27.452 7.97a5.4 5.4 0 0 1 3.68 6.692l-61.44 211.626a5.397 5.397 0 0 1-6.69 3.681zm160.792-111.045-64.866 60.812a5.4 5.4 0 0 1-7.633-.246l-19.58-20.885a5.4 5.4 0 0 1 .372-7.747L284.35 336l-40.763-35.874a5.4 5.4 0 0 1-.372-7.747l19.58-20.885a5.4 5.4 0 0 1 7.633-.246l64.866 60.812a5.4 5.4 0 0 1-.001 7.879z"/></svg></span> Unstructured vs Structured Data<a class="headerlink" href="#unstructured-vs-structured-data" title="Permanent link">&para;</a></h3>
+<h4 id="data-meant-for-humans-to-read">Data Meant for Humans to Read<a class="headerlink" href="#data-meant-for-humans-to-read" title="Permanent link">&para;</a></h4>
+<p>When we interact with the <abbr title="Command Line Interface">CLI</abbr> of a network device, server, storage system, cloud compute platform, etc., we typically send text commands and receive text responses.  Usually, the responses to our commands are plain text in an <strong>unstructured</strong> format.  Most times we see the raw data response formatted with a variety of spaces, tabs, numbering, tables, or even text-based graphics, to make it easier for humans to read.</p>
 <hr />
-<h2 id="hands-on-lab-setup">Hands-On Lab Setup<a class="headerlink" href="#hands-on-lab-setup" title="Permanent link">&para;</a></h2>
-<p>// TODO</p>
+<h4 id="data-meant-for-computers-to-read">Data Meant for Computers to Read<a class="headerlink" href="#data-meant-for-computers-to-read" title="Permanent link">&para;</a></h4>
+<p>When a computer, such as an automtion system, tries to read that same, <strong>unstructured</strong> data, we usually have to tell the computer specifically how it should search (or parse) through all of the spaces, special characters, and text graphics to find the specific, raw data it needs.  Parsing through unstructured data is often difficult to configure, temperamental to successfully test, and a headache to maintain.  Anytime an <abbr title="Information Technology">IT</abbr> system undergoes a software or hardware change, the format of an unstructured command response can change, even if by a single character, and cause a parser to fail or work improperly.</p>
 <hr />
-<h2 id="getting-started">Getting Started<a class="headerlink" href="#getting-started" title="Permanent link">&para;</a></h2>
+<h4 id="apis-and-data-formats"><abbr title="Application Programming Interfaces">APIs</abbr> and Data Formats<a class="headerlink" href="#apis-and-data-formats" title="Permanent link">&para;</a></h4>
+<p>So, how do we implement <abbr title="Information Technology">IT</abbr> automation workflows and avoid having our lives comsumed by the "joy" of writing and maintaining text parsers?  Fortunately, most <abbr title="Information Technology">IT</abbr> systems have programmatic interfaces, referred to as <abbr title="Application Programming Interfaces">APIs</abbr>, which can send and receive configuration or state/status data in a <strong>structured</strong> format.  Some of the more common <strong>structured</strong> data formats include <abbr title="JavaScript Object Notation">JSON</abbr>, <abbr title="eXtensible Markup Language">XML</abbr>, and <abbr title="YAML Ain't Markup Language">YAML</abbr>.</p>
+<p>Each of these <strong>structured data encoding formats</strong> are much easier for computers to read because the <strong>structure</strong> of the data adheres to a standard format which <abbr title="Information Technology">IT</abbr> systems and programming languages can read without text parsers.</p>
+<hr />
+<h2 id="a-practical-example"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="m278.9 511.5-61-17.7c-6.4-1.8-10-8.5-8.2-14.9L346.2 8.7c1.8-6.4 8.5-10 14.9-8.2l61 17.7c6.4 1.8 10 8.5 8.2 14.9L293.8 503.3c-1.9 6.4-8.5 10.1-14.9 8.2zm-114-112.2 43.5-46.4c4.6-4.9 4.3-12.7-.8-17.2L117 256l90.6-79.7c5.1-4.5 5.5-12.3.8-17.2l-43.5-46.4c-4.5-4.8-12.1-5.1-17-.5L3.8 247.2c-5.1 4.7-5.1 12.8 0 17.5l144.1 135.1c4.9 4.6 12.5 4.4 17-.5zm327.2.6 144.1-135.1c5.1-4.7 5.1-12.8 0-17.5L492.1 112.1c-4.8-4.5-12.4-4.3-17 .5L431.6 159c-4.6 4.9-4.3 12.7.8 17.2L523 256l-90.6 79.7c-5.1 4.5-5.5 12.3-.8 17.2l43.5 46.4c4.5 4.9 12.1 5.1 17 .6z"/></svg></span> A Practical Example<a class="headerlink" href="#a-practical-example" title="Permanent link">&para;</a></h2>
+<p>Here is a real example of some data that a network device sent in response to a request from each its <abbr title="Command Line Interface">CLI</abbr> and its <abbr title="Application Programming Interface">API</abbr>.  Now, unless you happen to be a computer, you will probably find the <abbr title="Command Line Interface">CLI</abbr> example (<strong>unstructured data</strong>) a bit easier to read than the <abbr title="Application Programming Interface">API</abbr> example (<strong>structured data</strong>).</p>
+<hr />
+<h3 id="a-side-by-side-comparision"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path d="m149.9 349.1-.2-.2-32.8-28.9 32.8-28.9c3.6-3.2 4-8.8.8-12.4l-.2-.2-17.4-18.6c-3.4-3.6-9-3.7-12.4-.4l-57.7 54.1c-3.7 3.5-3.7 9.4 0 12.8l57.7 54.1c1.6 1.5 3.8 2.4 6 2.4 2.4 0 4.8-1 6.4-2.8l17.4-18.6c3.3-3.5 3.1-9.1-.4-12.4zm220-251.2L286 14C277 5 264.8-.1 252.1-.1H48C21.5 0 0 21.5 0 48v416c0 26.5 21.5 48 48 48h288c26.5 0 48-21.5 48-48V131.9c0-12.7-5.1-25-14.1-34zM256 51.9l76.1 76.1H256zM336 464H48V48h160v104c0 13.3 10.7 24 24 24h104zM209.6 214c-4.7-1.4-9.5 1.3-10.9 6L144 408.1c-1.4 4.7 1.3 9.6 6 10.9l24.4 7.1c4.7 1.4 9.6-1.4 10.9-6L240 231.9c1.4-4.7-1.3-9.6-6-10.9zm24.5 76.9.2.2 32.8 28.9-32.8 28.9c-3.6 3.2-4 8.8-.8 12.4l.2.2 17.4 18.6c3.3 3.5 8.9 3.7 12.4.4l57.7-54.1c3.7-3.5 3.7-9.4 0-12.8l-57.7-54.1c-3.5-3.3-9.1-3.2-12.4.4l-17.4 18.6c-3.3 3.5-3.1 9.1.4 12.4z"/></svg></span> A Side-by-Side Comparision<a class="headerlink" href="#a-side-by-side-comparision" title="Permanent link">&para;</a></h3>
+<details class="abstract" open="open"><summary>Example Network Device <abbr title="Command Line Interface">CLI</abbr> and <abbr title="Application Programming Interface">API</abbr> Response Data</summary><p>Even though the <abbr title="Command Line Interface">CLI</abbr> and <abbr title="Application Programming Interface">API</abbr> data formats look drastically different, they both provide the <em>exact</em> same data.</p>
+<div class="tabbed-set" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1"><abbr title="Command Line Interface">CLI</abbr> Response Output - Unstructured Data</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code>interface Ethernet1/10
+  ip access-group WEB-SERVER out
+!
+IP access list WEB-SERVER
+        20 permit icmp 192.168.2.0/24 192.168.5.3/32 
+!
+</code></pre></div>
+</div>
+<input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><label for="__tabbed_1_2"><abbr title="Application Programming Interface">API</abbr> Response Output - Structured Data</label><div class="tabbed-content">
+<div class="highlight"><pre><span></span><code><span class="cp">&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;</span>
+<span class="nt">&lt;rpc-reply</span> <span class="na">xmlns:nxos=</span><span class="s">&quot;http://www.cisco.com/nxos:1.0&quot;</span> <span class="na">xmlns:if=</span><span class="s">&quot;http://www.cisco.com/nxos:1.0:if_manager&quot;</span> <span class="na">xmlns:nfcli=</span><span class="s">&quot;http://www.cisco.com/nxos:1.0:nfcli&quot;</span> <span class="na">xmlns:vlan_mgr_cli=</span><span class="s">&quot;http://www.cisco.com/nxos:1.0:vlan_mgr_cli&quot;</span> <span class="na">xmlns=</span><span class="s">&quot;urn:ietf:params:xml:ns:netconf:base:1.0&quot;</span> <span class="na">message-id=</span><span class="s">&quot;urn:uuid:abe5a744-a857-4dbd-ba4e-c96260f5fc5b&quot;</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;data&gt;</span>
+        <span class="nt">&lt;acl</span> <span class="na">xmlns=</span><span class="s">&quot;http://openconfig.net/yang/acl&quot;</span><span class="nt">&gt;</span>
+            <span class="nt">&lt;interfaces&gt;</span>
+                <span class="nt">&lt;interface&gt;</span>
+                    <span class="nt">&lt;id&gt;</span>eth1/10<span class="nt">&lt;/id&gt;</span>
+                    <span class="nt">&lt;config&gt;</span>
+                        <span class="nt">&lt;id&gt;</span>eth1/10<span class="nt">&lt;/id&gt;</span>
+                    <span class="nt">&lt;/config&gt;</span>
+                    <span class="nt">&lt;egress-acl-sets&gt;</span>
+                        <span class="nt">&lt;egress-acl-set&gt;</span>
+                            <span class="nt">&lt;set-name&gt;</span>WEB-SERVER<span class="nt">&lt;/set-name&gt;</span>
+                            <span class="nt">&lt;type&gt;</span>ACL_IPV4<span class="nt">&lt;/type&gt;</span>
+                            <span class="nt">&lt;config&gt;</span>
+                                <span class="nt">&lt;set-name&gt;</span>WEB-SERVER<span class="nt">&lt;/set-name&gt;</span>
+                                <span class="nt">&lt;type&gt;</span>ACL_IPV4<span class="nt">&lt;/type&gt;</span>
+                            <span class="nt">&lt;/config&gt;</span>
+                        <span class="nt">&lt;/egress-acl-set&gt;</span>
+                    <span class="nt">&lt;/egress-acl-sets&gt;</span>
+                    <span class="nt">&lt;interface-ref&gt;</span>
+                        <span class="nt">&lt;config&gt;</span>
+                            <span class="nt">&lt;interface&gt;</span>eth1/10<span class="nt">&lt;/interface&gt;</span>
+                        <span class="nt">&lt;/config&gt;</span>
+                    <span class="nt">&lt;/interface-ref&gt;</span>
+                <span class="nt">&lt;/interface&gt;</span>
+            <span class="nt">&lt;/interfaces&gt;</span>
+            <span class="nt">&lt;acl-sets&gt;</span>
+                <span class="nt">&lt;acl-set&gt;</span>
+                    <span class="nt">&lt;name&gt;</span>WEB-SERVER<span class="nt">&lt;/name&gt;</span>
+                    <span class="nt">&lt;type&gt;</span>ACL_IPV4<span class="nt">&lt;/type&gt;</span>
+                    <span class="nt">&lt;acl-entries&gt;</span>
+                        <span class="nt">&lt;acl-entry&gt;</span>
+                            <span class="nt">&lt;sequence-id&gt;</span>20<span class="nt">&lt;/sequence-id&gt;</span>
+                            <span class="nt">&lt;actions&gt;</span>
+                                <span class="nt">&lt;config&gt;</span>
+                                    <span class="nt">&lt;forwarding-action&gt;</span>ACCEPT<span class="nt">&lt;/forwarding-action&gt;</span>
+                                <span class="nt">&lt;/config&gt;</span>
+                            <span class="nt">&lt;/actions&gt;</span>
+                            <span class="nt">&lt;config&gt;</span>
+                                <span class="nt">&lt;sequence-id&gt;</span>20<span class="nt">&lt;/sequence-id&gt;</span>
+                            <span class="nt">&lt;/config&gt;</span>
+                            <span class="nt">&lt;ipv4&gt;</span>
+                                <span class="nt">&lt;config&gt;</span>
+                                    <span class="nt">&lt;destination-address&gt;</span>192.168.5.3/32<span class="nt">&lt;/destination-address&gt;</span>
+                                    <span class="nt">&lt;protocol&gt;</span>IP_ICMP<span class="nt">&lt;/protocol&gt;</span>
+                                    <span class="nt">&lt;source-address&gt;</span>192.168.2.0/24<span class="nt">&lt;/source-address&gt;</span>
+                                <span class="nt">&lt;/config&gt;</span>
+                            <span class="nt">&lt;/ipv4&gt;</span>
+                        <span class="nt">&lt;/acl-entry&gt;</span>
+                    <span class="nt">&lt;/acl-entries&gt;</span>
+                    <span class="nt">&lt;config&gt;</span>
+                        <span class="nt">&lt;name&gt;</span>WEB-SERVER<span class="nt">&lt;/name&gt;</span>
+                        <span class="nt">&lt;type&gt;</span>ACL_IPV4<span class="nt">&lt;/type&gt;</span>
+                    <span class="nt">&lt;/config&gt;</span>
+                <span class="nt">&lt;/acl-set&gt;</span>
+            <span class="nt">&lt;/acl-sets&gt;</span>
+        <span class="nt">&lt;/acl&gt;</span>
+    <span class="nt">&lt;/data&gt;</span>
+<span class="nt">&lt;/rpc-reply&gt;</span>
+</code></pre></div>
+</div>
+</div>
+</details>
+<hr />
+<h3 id="comparing-the-code"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.8 200.5c-7.7-30.9-22.3-54.2-53.4-54.2h-40.1v47.4c0 36.8-31.2 67.8-66.8 67.8H172.7c-29.2 0-53.4 25-53.4 54.3v101.8c0 29 25.2 46 53.4 54.3 33.8 9.9 66.3 11.7 106.8 0 26.9-7.8 53.4-23.5 53.4-54.3v-40.7H226.2v-13.6h160.2c31.1 0 42.6-21.7 53.4-54.2 11.2-33.5 10.7-65.7 0-108.6zM286.2 404c11.1 0 20.1 9.1 20.1 20.3 0 11.3-9 20.4-20.1 20.4-11 0-20.1-9.2-20.1-20.4.1-11.3 9.1-20.3 20.1-20.3zM167.8 248.1h106.8c29.7 0 53.4-24.5 53.4-54.3V91.9c0-29-24.4-50.7-53.4-55.6-35.8-5.9-74.7-5.6-106.8.1-45.2 8-53.4 24.7-53.4 55.6v40.7h106.9v13.6h-147c-31.1 0-58.3 18.7-66.8 54.2-9.8 40.7-10.2 66.1 0 108.6 7.6 31.6 25.7 54.2 56.8 54.2H101v-48.8c0-35.3 30.5-66.4 66.8-66.4zm-6.7-142.6c-11.1 0-20.1-9.1-20.1-20.3.1-11.3 9-20.4 20.1-20.4 11 0 20.1 9.2 20.1 20.4s-9 20.3-20.1 20.3z"/></svg></span> Comparing the Code<a class="headerlink" href="#comparing-the-code" title="Permanent link">&para;</a></h3>
+<p>If you're thinking, <em>"Why would I ever want to deal with <strong>structured data</strong>? It looks like a mess!"</em>  Well, to put it simply, <strong>structured data</strong> is <em>way</em> easier to work with <strong>programmatically</strong>.  Take a look at how we might parse both the <abbr title="Command Line Interface">CLI</abbr> and <abbr title="Application Programming Interface">API</abbr> responses with some Python code:</p>
+<details class="note" open="open"><summary>Example Code Exercise</summary><p>The goal of this exercise is to parse the interface ID from each the <abbr title="Command Line Interface">CLI</abbr> and <abbr title="Application Programming Interface">API</abbr> response data sets.  For reference, the correct result of a search for the interface ID is the text <strong>1/10</strong>.  These examples assume the <abbr title="Command Line Interface">CLI</abbr> and <abbr title="Application Programming Interface">API</abbr> data are already available to the Python interpreter, in the variable with the name <strong><code>data</code></strong>.</p>
+<ul>
+<li>Even though the <abbr title="Command Line Interface">CLI</abbr> response data is only a few lines long, the Python code to parse the interface ID from that data, with a regular expression, is lengthy and somewhat complex to read.</li>
+<li>By contrast, even though the <abbr title="Application Programming Interface">API</abbr> response data is lenghty, the Python code to parse the interface ID is short and far less complex to read.</li>
+</ul>
+<details class="example"><summary>Click to view the code examples</summary><div class="tabbed-set" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><label for="__tabbed_2_1">Parse the Unstructured (<abbr title="Command Line Interface">CLI</abbr>) Response</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
+<span class="normal"> 2</span>
+<span class="normal"> 3</span>
+<span class="normal"> 4</span>
+<span class="normal"> 5</span>
+<span class="normal"> 6</span>
+<span class="normal"> 7</span>
+<span class="normal"> 8</span>
+<span class="normal"> 9</span>
+<span class="normal">10</span>
+<span class="normal">11</span>
+<span class="normal">12</span>
+<span class="normal">13</span>
+<span class="normal">14</span>
+<span class="normal">15</span>
+<span class="normal">16</span>
+<span class="normal">17</span>
+<span class="normal">18</span>
+<span class="normal">19</span>
+<span class="normal">20</span>
+<span class="normal">21</span>
+<span class="normal">22</span>
+<span class="normal">23</span>
+<span class="normal">24</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># CLI response</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">cli_response</span>
+
+<span class="c1"># Regular expression search</span>
+<span class="hll"><span class="kn">import</span> <span class="nn">re</span>
+</span><span class="hll"><span class="n">search_pattern</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;&#39;&#39;</span>
+</span><span class="hll"><span class="s1">    ^         # Search from the beginning of the line</span>
+</span><span class="hll"><span class="s1">    (\D+      # Start match group 1, match 1 or more non-digits</span>
+</span><span class="hll"><span class="s1">    \s        # Match a single space character</span>
+</span><span class="hll"><span class="s1">    \D+)      # Match 1 or more non-digits, end match group 1</span>
+</span><span class="hll"><span class="s1">    ([0-9]    # Start match group 2, match any single digit</span>
+</span><span class="hll"><span class="s1">    \/        # Match a single forward slash</span>
+</span><span class="hll"><span class="s1">    [0-9]</span><span class="si">{2}</span><span class="s1">) # Match any two digits, end match group 2</span>
+</span><span class="hll"><span class="s1">    \n        # Match the end of the line</span>
+</span><span class="hll"><span class="s1">    &#39;&#39;&#39;</span><span class="p">,</span>
+</span><span class="hll">    <span class="n">re</span><span class="o">.</span><span class="n">VERBOSE</span>
+</span><span class="hll"><span class="p">)</span>
+</span>
+<span class="hll"><span class="n">search_result</span> <span class="o">=</span> <span class="n">search_pattern</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+</span>
+<span class="hll"><span class="k">try</span><span class="p">:</span>
+</span><span class="hll">    <span class="n">interface_name</span> <span class="o">=</span> <span class="n">search_result</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+</span><span class="hll"><span class="k">except</span> <span class="ne">AttributeError</span><span class="p">:</span>
+</span><span class="hll">    <span class="k">pass</span>
+</span></code></pre></div>
+</td></tr></table>
+</div>
+<input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><label for="__tabbed_2_2">Parsing the Structured (<abbr title="Application Programming Interface">API</abbr>) Response</label><div class="tabbed-content">
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span>
+<span class="normal">8</span></pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="c1"># API response</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">api_data</span><span class="p">[</span><span class="s1">&#39;rpc_reply&#39;</span><span class="p">]</span>
+
+<span class="c1"># Extract the interface name</span>
+<span class="hll"><span class="k">try</span><span class="p">:</span>
+</span><span class="hll">    <span class="n">interface_name</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;acl&#39;</span><span class="p">][</span><span class="s1">&#39;interfaces&#39;</span><span class="p">][</span><span class="s1">&#39;interface&#39;</span><span class="p">][</span><span class="s1">&#39;id&#39;</span><span class="p">]</span>
+</span><span class="hll"><span class="k">except</span> <span class="ne">KeyError</span><span class="p">:</span>
+</span><span class="hll">    <span class="k">pass</span>
+</span></code></pre></div>
+</td></tr></table>
+</div>
+</div>
+</details>
+</details>
+<hr />
+<p>All right, that's enough reading for now.  It's time to get into the lab exercises and get some real practice.  If everything to this point makes perfect sense to you, great!  If not, don't worry because you're about to get a lot of hands-on repetitions with functional code.  <a href="sections/section_1/" title="Hands-On Lab Setup">Click here to continue to the next section</a>.</p>
                 
               
               
@@ -460,7 +673,7 @@
               <span class="md-footer__direction">
                 Next
               </span>
-              Network Programmability Foundation
+              Hands-On Lab Setup
             </div>
           </div>
           <div class="md-footer__button md-icon">
