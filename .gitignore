@@ -1,3 +1,6 @@
+# _gitignore folder
+_gitignore
+
 # Completed Data Files
 python_data.py
 new_network_data.json

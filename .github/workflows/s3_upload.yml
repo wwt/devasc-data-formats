@@ -1,0 +1,27 @@
+---
+name: S3 File Upload
+on:
+  push:
+
+jobs:
+  upload:
+    runs-on: ubuntu-latest
+    env:
+      LOCAL_PATH: config/
+      AWS_BUCKET: devasc-data-formats
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Setup s3cmd
+        uses: s3-actions/s3cmd@v1.1
+        with:
+          provider: aws
+          region: US
+          access_key: ${{ secrets.S3_ACCESS_KEY }}
+          secret_key: ${{ secrets.S3_SECRET_KEY }}
+
+      - name: Upload Config Folder Contents
+        run: |
+          s3cmd --acl-public --recursive \
+          put ${{ env.LOCAL_PATH }} s3://${{ env.AWS_BUCKET }}

@@ -3,9 +3,9 @@ site_name: "WWT - Cisco DevNet DEVASC Data Encoding Formats"
 site_url: "https://wwt.github.io/devasc-data-formats"
 nav:
   - Home:
-    - Outline: index.md
-  - Section 1:
-    - Network Programmability Foundation: sections/section_1.md
+    - About: index.md
+  - Lab Setup:
+    - Hands-On Lab Setup: sections/section_1.md
 
 # Repository
 repo_name: "wwt/devasc-data-formats"
@@ -57,16 +57,23 @@ theme:
         prebuild_index: true
 
 markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - pymdownx.caret
+  - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
-  - admonition
-  - attr_list
   - pymdownx.highlight
-  - pymdownx.details
+  - pymdownx.inlinehilite
   - pymdownx.keys
+  - pymdownx.mark
+  - pymdownx.snippets
   - pymdownx.superfences
+  - pymdownx.tabbed
   - pymdownx.tasklist
+  - pymdownx.tilde
   - toc:
       permalink: true
 
