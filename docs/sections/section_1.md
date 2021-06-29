@@ -185,22 +185,10 @@ We provide instructions for three different lab setup options.  Choose the optio
 
 Choose the appropriate instructions for your Docker environment to get started:
 
-// lab components overview
-
-    // include info about PF lab and advise that their own computer can work
-
-// PF lab launch instructions
-    1. access PF lab
-    2. confirm docker is running
-    3. Copy/paste PowerShell command
-    4. Open exercises
-
 // Non-PF lab launch instructions
     1. Run docker container
     2. Launch browser
     3. Open exercises
-
-// build from source
 
 // VS code development environment
 
