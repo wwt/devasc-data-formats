@@ -152,7 +152,7 @@ We provide instructions for three different lab setup options.  Choose the optio
 
             ??? todo "Step 12"
 
-                 Open the file **python.ipynb** and begin working through the step-by-step instructions in the main pane:
+                 Open the file **python.ipynb** and follow the step-by-step instructions in the main pane:
 
                 [![12_jupyter_nav_4](../images/pf_lab/12_jupyter_nav_4.png "Open the file 'python.ipynb'")](../images/pf_lab/12_jupyter_nav_4.png){target=_blank}
 
@@ -265,70 +265,97 @@ We provide instructions for three different lab setup options.  Choose the optio
 
                 3. A Docker runtime environment such as [Docker Desktop for Windows or macOS](https://www.docker.com/products/docker-desktop "Docker Desktop for Windows or macOS"){target=_blank}, [Docker for Linux](https://hub.docker.com/search?offering=community&operating_system=linux&q=&type=edition "Docker for Linux"){target=_blank}, etc..
 
-                    ??? danger "WWT Programmability Foundations On-Demand Lab Requirements"
-
-                        If you intend to use these instructions with the [WWT Programmability Foundations On-Demand Lab](https://www.wwt.com/lab/programmability-foundations-lab "WWT Programmability Foundations On-Demand Lab"){target=_blank}, take note of the following advisories:
-
-                        - The **Visual Studio Code** installation on the [WWT Programmability Foundations On-Demand Lab](https://www.wwt.com/lab/programmability-foundations-lab "WWT Programmability Foundations On-Demand Lab"){target=_blank} **requires an upgrade** before it will successfully launch this development container.
-
-                        - The [WWT Programmability Foundations On-Demand Lab](https://www.wwt.com/lab/programmability-foundations-lab "WWT Programmability Foundations On-Demand Lab"){target=_blank} **does not have Git for Windows pre-installed**.
  
-                The screenshots in the directions represent an example from a **Microsoft Windows** computer and the same procedures also work with **macOS** and **Linux**.
+                The screenshots in the directions represent an example from a **macOS** computer and the same procedures also work with **Microsoft Windows** and **Linux** computers.
 
             ???+ todo "Step 1"
 
-                Clone the [Git Repository](https://github.com/wwt/devasc-data-formats "DEVASC Data Formats Git Repository"){target=_blank}:
+                Clone the [Git Repository](https://github.com/wwt/devasc-data-formats "DEVASC Data Formats Git Repository"){target=_blank} to your development computer with the following command:
 
                 ```bash
                 git clone https://github.com/wwt/devasc-data-formats.git
                 ```
 
-                // Insert image
+                [![1_clone_repo](../images/dev_container/1_clone_repo.png "Clone the DEVASC Data Formats Git Repository")](../images/dev_container/1_clone_repo.png){target=_blank}
 
             ??? todo "Step 2"
 
-                Open Visual Studio Code:
+                Install the [Visual Studio Code Remote Development Extension Pack](https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack "Visual Studio Code Remote Development Extension Pack"){target=_blank}:
 
-                // Insert image
+                1. Open Visual Studio Code.
+                2. Click the **Extensions** icon.
+                3. Copy the **Remote Development Pack Extension ID string** to your clipboard:
+
+                    ```text
+                    ms-vscode-remote.vscode-remote-extensionpack
+                    ```
+
+                4. Paste the **Remote Development Pack Extension ID string** in the search box.
+                5. Click one of the **Install** buttons.
+
+                [![2_install_remote_dev_extension](../images/dev_container/2_install_remote_dev_extension.png "Install the VS Code Remote Development Container Extension")](../images/dev_container/2_install_remote_dev_extension.png){target=_blank}
 
             ??? todo "Step 3"
 
-                Install the Remote Development Pack Extension
+                Open the Git Repository in a Development Container:
 
-                ```text
-                ms-vscode-remote.vscode-remote-extensionpack
-                ```
+                1. Click the **Remote Development** icon in the lower-left corner of the VS Code window.
+                2. From the drop menu, choose the option to **Open Folder in Container**.
 
-                // Insert image
+                [![3_open_remote_dev_container](../images/dev_container/3_open_remote_dev_container.png "Open the Git Repository in a Development Container")](../images/dev_container/3_open_remote_dev_container.png){target=_blank}
 
             ??? todo "Step 4"
 
-                Initiate the Development Container Startup Process:
+                Locate and select the Git repository folder on your development computer:
 
-                // Insert image
+                [![4_choose_git_repo](../images/dev_container/4_choose_git_repo.png "Locate and Select the Git Repository Folder")](../images/dev_container/4_choose_git_repo.png){target=_blank}
 
             ??? todo "Step 5"
 
-                Choose the Path to the cloned Git Repository:
+                Monitor the Development Environment build process:
 
-                // Insert image
+                1. Click the **show log** link in the lower-right corner of the VS Code window.
+                2. Observe the console output as the Container builds and starts.
+
+                !!! attention "Notice"
+
+                    - The initial build process may take 5-10 minutes to complete.
+                    - Subsequent activations will only take a few seconds.
+
+                [![5_monitor_dev_container_build](../images/dev_container/5_monitor_dev_container_build.png "Monitor the Development Environment Build Process")](../images/dev_container/5_monitor_dev_container_build.png){target=_blank}
 
             ??? todo "Step 6"
 
-                1. Open a web browser on your Docker runtime host.
-                2. Navigate to the Container's **JupyterLab server** at [http://localhost:8888](http://localhost:8888 "JupyterLab Server"){target=_blank}.
-                3. Double-click on the **part_i_python** folder in the navigation pane.
+                Observe the Development Environment complete activation:
 
-                // Insert image
+                1. The Git **repository file tree** will appear on the left side of the VS Code Window.
+                2. The **VS Code terminal window** will display **JupyterLab** activation information.
+
+                !!! attention "Notice"
+
+                    You may safely close the **VS Code Terminal Window** or toggle its visibility with the ++ctrl+grave++ key sequence.
+
+                [![6_dev_container_active](../images/dev_container/6_dev_container_active.png "Observe the Activated Development Environment")](../images/dev_container/6_dev_container_active.png){target=_blank}
 
             ??? todo "Step 7"
 
-                Open the file **python.ipynb** and begin working through the step-by-step instructions in the main pane:
+                1. Open a web browser on your development computer.
+                2. Navigate to the Development Container's **JupyterLab server** at [http://localhost:8888](http://localhost:8888 "JupyterLab Server"){target=_blank}.
+                3. Double-click on the **part_i_python** folder in the navigation pane.
 
-                // Insert image
+                [![7_jupyter_nav_1](../images/dev_container/7_jupyter_nav_1.png "Open the 'part_i_python' folder")](../images/dev_container/7_jupyter_nav_1.png){target=_blank}
 
-            ??? help "Lab Environment Shutdown"
+            ??? todo "Step 8"
 
-                Close the Development Environment Container
+                Open the file **python.ipynb** and follow the step-by-step instructions in the main pane:
 
-                // Insert image
+                [![8_jupyter_nav_2](../images/dev_container/8_jupyter_nav_2.png "Open the file 'python.ipynb'")](../images/dev_container/8_jupyter_nav_2.png){target=_blank}
+
+            ??? help "Development Environment Shutdown"
+
+                You may close the **Development Environment Container** without losing any of your lab progress from the Visual Studio Code Development Environment window:
+
+                1. Click the **Remote Development** icon in the lower-left corner of the VS Code window.
+                2. From the drop menu, choose the option to **Close Remote Connection**.
+
+                [![9_close_remote_dev_container](../images/dev_container/9_close_remote_dev_container.png "Close the Development Environment Container")](../images/dev_container/9_close_remote_dev_container.png){target=_blank}
