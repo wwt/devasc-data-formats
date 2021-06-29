@@ -34,7 +34,7 @@ We provide instructions for three different lab setup options.  Choose the optio
 
     **Option #2:** Run a pre-built Container in your own Docker runtime environment.
 
-    **Option #3:** Use the Included Visual Studio Code Development Container.
+    **Option #3:** Use the Visual Studio Code Development Container in the [Git Repository](https://github.com/wwt/devasc-data-formats "DEVASC Data Formats Git Repository"){target=_blank}.
 
     === "Option #1"
 
@@ -253,21 +253,31 @@ We provide instructions for three different lab setup options.  Choose the optio
 
     === "Option #3"
 
-        ???+ example "Use the Included Visual Studio Code Development Container"
+        ???+ example "Use the Visual Studio Code Development Container in the Git Repository"
 
             !!! attention
 
                 This option assumes your computer/development environment has the following software installed and in a functional state:
 
-                1. [Visual Studio Code](https://code.visualstudio.com/Download "Visual Studio Code Download"){target=_blank}.
+                1. [Visual Studio Code](https://code.visualstudio.com/Download "Visual Studio Code Download"){target=_blank} ==**version 1.5 or later**==.
+
                 2. [Git version control](https://git-scm.com/downloads "Git Installer Download){target=_blank}.
+
                 3. A Docker runtime environment such as [Docker Desktop for Windows or macOS](https://www.docker.com/products/docker-desktop "Docker Desktop for Windows or macOS"){target=_blank}, [Docker for Linux](https://hub.docker.com/search?offering=community&operating_system=linux&q=&type=edition "Docker for Linux"){target=_blank}, etc..
+
+                    ??? danger "WWT Programmability Foundations On-Demand Lab Requirements"
+
+                        If you intend to use these instructions with the [WWT Programmability Foundations On-Demand Lab](https://www.wwt.com/lab/programmability-foundations-lab "WWT Programmability Foundations On-Demand Lab"){target=_blank}, take note of the following advisories:
+
+                        - The **Visual Studio Code** installation on the [WWT Programmability Foundations On-Demand Lab](https://www.wwt.com/lab/programmability-foundations-lab "WWT Programmability Foundations On-Demand Lab"){target=_blank} **requires an upgrade** before it will successfully launch this development container.
+
+                        - The [WWT Programmability Foundations On-Demand Lab](https://www.wwt.com/lab/programmability-foundations-lab "WWT Programmability Foundations On-Demand Lab"){target=_blank} **does not have Git for Windows pre-installed**.
  
                 The screenshots in the directions represent an example from a **Microsoft Windows** computer and the same procedures also work with **macOS** and **Linux**.
 
             ???+ todo "Step 1"
 
-                Clone the Git repository:
+                Clone the [Git Repository](https://github.com/wwt/devasc-data-formats "DEVASC Data Formats Git Repository"){target=_blank}:
 
                 ```bash
                 git clone https://github.com/wwt/devasc-data-formats.git
@@ -283,23 +293,27 @@ We provide instructions for three different lab setup options.  Choose the optio
 
             ??? todo "Step 3"
 
-                Install the Remote Development 
+                Install the Remote Development Pack Extension
+
+                ```text
+                ms-vscode-remote.vscode-remote-extensionpack
+                ```
 
                 // Insert image
 
-            ??? todo "Step 3"
+            ??? todo "Step 4"
 
                 Initiate the Development Container Startup Process:
 
                 // Insert image
 
-            ??? todo "Step 3"
+            ??? todo "Step 5"
 
                 Choose the Path to the cloned Git Repository:
 
                 // Insert image
 
-            ??? todo "Step 4"
+            ??? todo "Step 6"
 
                 1. Open a web browser on your Docker runtime host.
                 2. Navigate to the Container's **JupyterLab server** at [http://localhost:8888](http://localhost:8888 "JupyterLab Server"){target=_blank}.
@@ -307,7 +321,7 @@ We provide instructions for three different lab setup options.  Choose the optio
 
                 // Insert image
 
-            ??? todo "Step 5"
+            ??? todo "Step 7"
 
                 Open the file **python.ipynb** and begin working through the step-by-step instructions in the main pane:
 
@@ -318,7 +332,3 @@ We provide instructions for three different lab setup options.  Choose the optio
                 Close the Development Environment Container
 
                 // Insert image
-
-// VS code development environment
-
-// contributions
