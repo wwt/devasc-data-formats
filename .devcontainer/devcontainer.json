@@ -1,7 +1,7 @@
 {
     "name": "WWT - Cisco DevNet DEVASC Data Formats Dev Container",
     "build": {
-        "dockerfile": "../Dockerfile",
+        "dockerfile": "../Dockerfile.dev",
         "context": ".."
     },
     "extensions": [

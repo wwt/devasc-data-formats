@@ -1,0 +1,7 @@
+version: '3'
+services:
+  data-formats:
+    image: wwt01/devasc-data-formats
+    container_name: 'data-formats'
+    ports:
+      - '8888:8888'
