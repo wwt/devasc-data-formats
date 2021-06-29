@@ -60,17 +60,20 @@ markdown_extensions:
   - abbr
   - admonition
   - attr_list
+  - pymdownx.caret
+  - pymdownx.details
   - pymdownx.emoji:
       emoji_index: !!python/name:materialx.emoji.twemoji
       emoji_generator: !!python/name:materialx.emoji.to_svg
   - pymdownx.highlight
   - pymdownx.inlinehilite
-  - pymdownx.details
   - pymdownx.keys
+  - pymdownx.mark
   - pymdownx.snippets
   - pymdownx.superfences
   - pymdownx.tabbed
   - pymdownx.tasklist
+  - pymdownx.tilde
   - toc:
       permalink: true
 
