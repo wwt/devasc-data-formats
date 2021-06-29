@@ -163,112 +163,6 @@ function validate_git_repo() {
 }
 
 
-# Setup YANG Suite
-function setup_yang_suite() {
-    # Clone YANG Suite repo
-    Write-Host "Cloning YANG Suite repository..." -ForegroundColor Green
-    Write-Host ""
-    try {
-        $yang_suite_dir = Test-Path "${ROOT_PATH}\yangsuite" -PathType Container
-
-        if (-not ($yang_suite_dir)) {
-            docker exec -it jupyter1 git clone $YANG_SUITE_REPO
-        }
-        Write-Host ""
-        Write-Host "...YANG Suite repository cloned." -ForegroundColor Green
-        Write-Host ""
-    }
-    catch {
-        handle_error("Unable to clone YANG Suite repository, please try again.")
-    }
-    
-    try {
-        # Download custom configuration data
-        Write-Host "Downloading YANG Suite settings..." -NoNewline -ForegroundColor Green
-        $yang_suite_settings_path = "${ROOT_PATH}\yangsuite\docker"
-        $yang_suite_settings = "${yang_suite_settings_path}\${YANG_SUITE_SETTINGS_FILE}"
-        Invoke-WebRequest -Uri $YANG_SUITE_SETTINGS_URI -OutFile $yang_suite_settings -ErrorAction SilentlyContinue
-        Write-Host "done." -ForegroundColor Green
-        Write-Host ""
-    }
-    catch {
-        handle_error("Unable to download YANG Suite settings, please try again.")
-    }
-
-    try {
-        # Unzip custom configuration data file
-        Write-Host "Applying YANG Suite settings..." -NoNewline -ForegroundColor Green
-        Expand-Archive -LiteralPath $yang_suite_settings -DestinationPath $yang_suite_settings_path -ErrorAction SilentlyContinue
-        Write-Host "done." -ForegroundColor Green
-        Write-Host ""
-    }
-    catch {
-        Write-Warning "Unable to apply YANG Suite settings."
-    }
-
-    # Pull YANG Suite Images
-    $total_images = $YANG_SUITE_IMAGES.length
-    Write-Host "Loading ${total_images} YANG Suite Docker Images..." -ForegroundColor Green
-    Write-Host ""
-    try {
-        $loop_count = 1
-        foreach ($image in $YANG_SUITE_IMAGES) {
-            Write-Host ""
-            Write-Host "Pulling Image ${loop_count} of ${total_images}" -ForegroundColor Green
-                docker pull $image
-            Write-Host ""
-            $loop_count += 1
-        }
-        Write-Host ""
-        Write-Host "...loaded YANG Suite Docker Images." -ForegroundColor Green
-        Write-Host ""
-    }
-    catch {
-        handle_error("Unable to pull YANG Suite Images, please try again.")
-    }
-
-    # Import custom Docker Compose file
-    Write-Host "Importing Docker Compose file..." -NoNewline -ForegroundColor Green
-    try {
-        $docker_compose_path = "${ROOT_PATH}\yangsuite\docker\"
-        $docker_compose_file = $docker_compose_path + $DOCKER_COMPOSE_FILE
-        Rename-Item -Path $docker_compose_file -NewName "${docker_compose_file}.old" -ErrorAction SilentlyContinue
-        Invoke-WebRequest -Uri $DOCKER_COMPOSE_URI -OutFile $docker_compose_file
-        Write-Host "done." -ForegroundColor Green
-        Write-Host ""
-    }
-    catch {
-        handle_error("Unable to load Docker Compose file, please try again.")
-    }
-
-    # Start YANG Suite Containers
-    Write-Host "Starting YANG Suite Containers..." -ForegroundColor Green
-    Write-Host ""
-    
-    try {
-        docker-compose -f $docker_compose_file down
-        docker-compose -f $docker_compose_file up -d --force-recreate
-        Start-Sleep -Seconds $YANG_SUITE_LAUNCH_DELAY
-        Write-Host ""
-        Write-Host "...YANG Suite Containers started." -ForegroundColor Green
-        Write-Host ""
-    }
-    catch {
-        handle_error("Unable to start YANG Suite Containers, please try again.")
-    }
-    
-    # Launch YANG Suite in Chrome
-    Write-Host "Opening YANG Suite in a Chrome browser window..." -NoNewline -ForegroundColor Green
-    try {
-        Start-Process -FilePath "chrome.exe" -ArgumentList "$CHROME_ARGS $YANG_SUITE_URL"
-        Write-Host "done." -ForegroundColor Green
-    }
-    catch {
-        handle_error("Unable to launch Chrome, you may manually navigate to the URL: `n${YANG_SUITE_URL}.")
-    }
-}
-
-
 # Create link file object
 function create_link_obj($link_name, $link_target, $command=$False){
     if ($command) {
@@ -287,18 +181,12 @@ function create_link_obj($link_name, $link_target, $command=$False){
 }
 
 
-# Create links to relaunch lab & launch YANG Suite
+# Create links to relaunch lab
 function create_shortcuts(){
     # Relaunch lab link
     Write-Host ""
     Write-Host "Creating desktop shortcut to restart the lab..." -NoNewline -ForegroundColor Green
     create_link_obj("Restart Lab.lnk")("powershell.exe")("setup_lab.ps1")
-    Write-Host "done" -ForegroundColor Green
-
-    # YANG Suite Explorer link
-    Write-Host ""
-    Write-Host "Creating desktop shortcut to launch YANG Suite..." -NoNewline -ForegroundColor Green
-    create_link_obj("YANG Suite.url")($YANG_SUITE_URL)
     Write-Host "done" -ForegroundColor Green
 }
 
@@ -322,7 +210,6 @@ function main() {
     setup_docker
     run_jupyter_launcher
     validate_git_repo
-    setup_yang_suite
     create_shortcuts
     display_exit
 }
