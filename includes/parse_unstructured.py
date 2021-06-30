@@ -20,5 +20,6 @@ search_result = search_pattern.search(data)
 
 try:
     interface_name = search_result.group(2)
-except AttributeError:
-    pass
+except AttributeError as e:
+    import sys
+    print(f'Error occurred - {e!r}', file=sys.stderr)
