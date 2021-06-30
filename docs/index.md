@@ -69,12 +69,12 @@ If you're thinking, _"Why would I ever want to deal with **structured data**? It
     ??? example "Click to view the code examples"
 
         === "Parse the Unstructured (CLI) Response"
-            ```python linenums="1" hl_lines="5-17 19 21-24"
+            ```python linenums="1" hl_lines="5-17 19 21-25"
             --8<-- "includes/parse_unstructured.py"
             ```
     
         === "Parsing the Structured (API) Response"
-            ```python linenums="1" hl_lines="5-8"
+            ```python linenums="1" hl_lines="5-9"
             --8<-- "includes/parse_structured.py"
             ```
 
