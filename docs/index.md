@@ -2,9 +2,11 @@
 
 ## :fontawesome-solid-laptop-code: Overview
 
-When we automate to IT systems, we get the fantastic benefit of _not_ having to either copy and paste configuration changes to dozens (maybe hundreds) of different systems or repeat the same click, click, click, click, click-through-the-UI marathon over, and over, and over..._every single time_ there's a need to make a bulk change :rage:.  To automate these sorts of workflows, it's important that we learn to write some form of automation-specific code.  To make that possible, it's essential that we know how to read and write the **data structures** that our code sends to and receives from the systems we automate.
+Automating IT Systems brings several fantastic benefits.  It eliminates the need to copy-and-paste configuration changes manually to dozens or even hundreds of systems if using the CLI.  If the systems use a User Interface (UI), it mitigates the same click...click...click...click...click-through-the-UI marathon over, and over, and over...every single time there's a need to make a bulk change.
 
-This guide will walk you through some hands-on exercises which help teach and and also give you a place to practice using various **data encoding formats** with Python.  You'll get the most from these exercises if you have at least a little bit of exposure to Python fundamentals although we put the step-by-step directions together in a way that welcomes all experience levels.
+We must learn to write some form of automation-specific code to automate these sorts of workflows.  We must know how to read and write the data structures that our code sends to and receives from the systems we automate to make that possible.
+
+This guide will walk you through some hands-on exercises which help teach and practice and give you a place to practice using various data encoding formats with Python. You'll get the most from these exercises if you have at least a little bit of exposure to Python fundamentals, although we put the step-by-step directions together in a way that welcomes all experience levels.
 
 ---
 
@@ -12,7 +14,7 @@ This guide will walk you through some hands-on exercises which help teach and an
 
 #### Data Meant for Humans to Read
 
-When we interact with the CLI of a network device, server, storage system, cloud compute platform, etc., we typically send text commands and receive text responses.  Usually, the responses to our commands are plain text in an **unstructured** format.  Most times we see the raw data response formatted with a variety of spaces, tabs, numbering, tables, or even text-based graphics, to make it easier for humans to read.
+Interacting with the CLI of servers, storage systems, or network devices typically yields text responses to our text commands. The text responses are usually in an **unstructured** format.  The raw data responses format uses spaces, tabs, numbering, tables, or even text-based graphics to make it easier for humans to read.
 
 ---
 
