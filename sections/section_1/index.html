@@ -474,16 +474,16 @@
 <p>It may be a few minutes before the Docker service is ready.</p>
 </div>
 <p><a href="../../images/pf_lab/6_docker_startup_complete.png" target="_blank"><img alt="6_docker_startup_complete" src="../../images/pf_lab/6_docker_startup_complete.png" title="Confirm the Docker for Windows Service Status" /></a></p>
-<details class="danger" open="open"><summary>Important</summary><p>Occasionally, the Docker Desktop service does not start on its own. Windows may ask you if you want to start the Docker service and thereafter request permission for Net Command​ to run. You may safely confirm both actions.</p>
+<details class="danger" open="open"><summary>Important</summary><p>Occasionally, the Docker Desktop service does not start on its own. Windows may ask you if you want to start the Docker service and then request permission for Net Command​ to run. You may safely confirm both actions.</p>
 <p><a href="../../images/pf_lab/14_start_docker.png" target="_blank"><img alt="14_start_docker" src="../../images/pf_lab/14_start_docker.png" title="Manually Start the Docker for Windows Service" /></a></p>
 <p><a href="../../images/pf_lab/15_start_docker_uac.png" target="_blank"><img alt="15_start_docker_uac" src="../../images/pf_lab/15_start_docker_uac.png" title="Allow Net Command to Run" /></a></p>
 </details>
 </details>
-<details class="todo"><summary>Step 7</summary><p>A PowerShell script will customize the lab environment automatically although and you need to paste a long command into a PowerShell window in order to start that process:</p>
+<details class="todo"><summary>Step 7</summary><p>A PowerShell script will customize the lab environment automatically although and you need to paste a long command into a PowerShell window to start that process:</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <ol>
-<li>Click the PowerShell icon in the task bar to open a new PowerShell window.</li>
+<li>Click the PowerShell icon in the taskbar to open a new PowerShell window.</li>
 <li>Then, copy the entire command below to your clipboard.</li>
 <li>Right-click in the PowerShell window to paste the command</li>
 <li>Press your Return/Enter key to run the command.</li>
@@ -494,12 +494,12 @@
 </div>
 <details class="error"><summary>What to do if you see a <strong>Docker Desktop process is not running</strong> error message:</summary><ul>
 <li>
-<p>From time-to-time, Windows takes a lenghty amount of time to successfully start the Docker Desktop process and rarely, Windows will fail to start Docker Desktop. If Windows cannot start Docker Desktop, your first indication will be an error message when you run the PowerShell script which configures the lab.</p>
+<p>From time to time, Windows takes a lengthy amount of time to successfully start the Docker Desktop process and, rarely, Windows will fail to start Docker Desktop. If Windows cannot start Docker Desktop, your first indication will be an error message when you run the PowerShell script that configures the lab.</p>
 <p><a href="../../images/pf_lab/16_start_docker_error.png" target="_blank"><img alt="16_start_docker_error" src="../../images/pf_lab/16_start_docker_error.png" title="Docker Process Not Running Error" /></a></p>
 <hr />
 </li>
 <li>
-<p>As the error message indicates, PowerShell will attempt to start or restart the Docker Desktop process. After a few seconds, the Docker Desktop application will open behind the PowerShell and you may bring it to the foreground to monitor the status.</p>
+<p>As the error message indicates, PowerShell will attempt to start or restart the Docker Desktop process. After a few seconds, the Docker Desktop application will open behind the PowerShell, and you may bring it to the foreground to monitor the status.</p>
 </li>
 </ul>
 <details class="attention" open="open"><summary>Docker for Windows Process Status</summary><ul>
@@ -509,7 +509,7 @@
 <li>
 <p><mark>An orange-colored icon</mark> in the lower-left corner of the Docker Desktop application indicates the Docker process is not running and you have a couple of options:</p>
 <ol>
-<li>Wait for around 10 minutes, to see if Windows is able to start the Docker process.</li>
+<li>Wait for around 10 minutes to see if Windows can start the Docker process.</li>
 <li>Launch a new instance of the <a href="https://www.wwt.com/lab/programmability-foundations-lab" target="_blank" title="WWT Programmability Foundations On-Demand Lab">WWT Programmability Foundations On-Demand Lab</a>.</li>
 </ol>
 </li>
@@ -533,7 +533,7 @@
 <details class="todo"><summary>Step 12</summary><p>Open the file <strong>python.ipynb</strong> and follow the step-by-step instructions in the main pane:</p>
 <p><a href="../../images/pf_lab/12_jupyter_nav_4.png" target="_blank"><img alt="12_jupyter_nav_4" src="../../images/pf_lab/12_jupyter_nav_4.png" title="Open the file 'python.ipynb'" /></a></p>
 </details>
-<details class="help"><summary>Lab Restart Instructions</summary><p>The lab setup process creates a shotcut on the Windows desktop which will help you restore the lab environment, in the event the JupyterLab browser tab closes, Windows restarts, etc.</p>
+<details class="help"><summary>Lab Restart Instructions</summary><p>The lab setup process creates a shortcut on the Windows desktop, which will help you restore the lab environment in the event the JupyterLab browser tab closes, Windows restarts, etc.</p>
 <div class="admonition attention">
 <p class="admonition-title">Notice</p>
 <ul>
@@ -550,7 +550,7 @@
 <p class="admonition-title">Attention</p>
 <ul>
 <li>This option assumes you have an operational Docker runtime environment and that your Docker daemon can connect to and download images from <a href="https://hub.docker.com/repository/docker/wwt01/devasc-data-formats &quot;Lab Image on Docker Hub" target="_blank">Docker Hub</a>.</li>
-<li>The screenshots in the directions represent an example from a <strong>macOS Terminal</strong> and the same commands and procedures also work with <strong>Windows PowerShell</strong>.</li>
+<li>The screenshots in the directions represent an example from a <strong>macOS Terminal</strong>, and the same commands and procedures also work with <strong>Windows PowerShell</strong>.</li>
 </ul>
 </div>
 <details class="todo" open="open"><summary>Step 1</summary><ol>
@@ -586,7 +586,7 @@
 <p><a href="../../images/docker_hub/4_open_python_notebook.png" target="_blank"><img alt="4_open_python_notebook" src="../../images/docker_hub/4_open_python_notebook.png" title="Open the file 'python.ipynb'" /></a></p>
 </details>
 <details class="help"><summary>Lab Environment Shutdown and Restart</summary><ul>
-<li>To shutdown the lab environment, return to your terminal window and press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span> twice, <strong>within 5 seconds</strong>.</li>
+<li>To shut down the lab environment, return to your terminal window and press <span class="keys"><kbd class="key-control">Ctrl</kbd><span>+</span><kbd class="key-c">C</kbd></span> twice, <strong>within 5 seconds</strong>.</li>
 </ul>
 <p><a href="../../images/docker_hub/5_stop_jupyter.png" target="_blank"><img alt="5_stop_jupyter" src="../../images/docker_hub/5_stop_jupyter.png" title="Stop the JupyterLab Server" /></a></p>
 </details>
@@ -627,7 +627,7 @@ docker rmi wwt01/devasc-data-formats
 <p>A Docker runtime environment such as <a href="https://www.docker.com/products/docker-desktop" target="_blank" title="Docker Desktop for Windows or macOS">Docker Desktop for Windows or macOS</a>, <a href="https://hub.docker.com/search?offering=community&amp;operating_system=linux&amp;q=&amp;type=edition" target="_blank" title="Docker for Linux">Docker for Linux</a>, etc..</p>
 </li>
 </ol>
-<p>The screenshots in the directions represent an example from a <strong>macOS</strong> computer and the same procedures also work with <strong>Microsoft Windows</strong> and <strong>Linux</strong> computers.</p>
+<p>The screenshots in the directions represent an example from a <strong>macOS</strong> computer, and the same procedures also work with <strong>Microsoft Windows</strong> and <strong>Linux</strong> computers.</p>
 </div>
 <details class="todo" open="open"><summary>Step 1</summary><p>Clone the <a href="https://github.com/wwt/devasc-data-formats" target="_blank" title="DEVASC Data Formats Git Repository">Git Repository</a> to your development computer with the following command:</p>
 <div class="highlight"><pre><span></span><code>git clone https://github.com/wwt/devasc-data-formats.git
@@ -676,7 +676,7 @@ docker rmi wwt01/devasc-data-formats
 </details>
 <details class="todo"><summary>Step 6</summary><p>Observe the Development Environment complete activation:</p>
 <ol>
-<li>The Git <strong>repository file tree</strong> will appear on the left side of the VS Code Window.</li>
+<li>The Git <strong>repository file tree</strong> will appear on the left side of the VS Code window.</li>
 <li>The <strong>VS Code terminal window</strong> will display <strong>JupyterLab</strong> activation information.</li>
 </ol>
 <div class="admonition attention">
