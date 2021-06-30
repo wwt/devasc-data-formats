@@ -83,7 +83,7 @@ We provide instructions for three different lab setup options.  Choose the optio
                 [![6_docker_startup_complete](../images/pf_lab/6_docker_startup_complete.png "Confirm the Docker for Windows Service Status")](../images/pf_lab/6_docker_startup_complete.png){target=_blank}
 
                 ???+ danger "Important"
-                    Occasionally, the Docker Desktop service does not start on its own. Windows may ask you if you want to start the Docker service and thereafter request permission for Net Command​ to run. You may safely confirm both actions.
+                    Occasionally, the Docker Desktop service does not start on its own. Windows may ask you if you want to start the Docker service and then request permission for Net Command​ to run. You may safely confirm both actions.
 
                     [![14_start_docker](../images/pf_lab/14_start_docker.png "Manually Start the Docker for Windows Service")](../images/pf_lab/14_start_docker.png){target=_blank}
 
@@ -91,10 +91,10 @@ We provide instructions for three different lab setup options.  Choose the optio
 
             ??? todo "Step 7"
 
-                A PowerShell script will customize the lab environment automatically although and you need to paste a long command into a PowerShell window in order to start that process:
+                A PowerShell script will customize the lab environment automatically although and you need to paste a long command into a PowerShell window to start that process:
 
                 !!! tip
-                    1. Click the PowerShell icon in the task bar to open a new PowerShell window.
+                    1. Click the PowerShell icon in the taskbar to open a new PowerShell window.
                     2. Then, copy the entire command below to your clipboard.
                     3. Right-click in the PowerShell window to paste the command
                     4. Press your Return/Enter key to run the command.
@@ -107,13 +107,13 @@ We provide instructions for three different lab setup options.  Choose the optio
 
                 ??? error "What to do if you see a **Docker Desktop process is not running** error message:"
 
-                    - From time-to-time, Windows takes a lenghty amount of time to successfully start the Docker Desktop process and rarely, Windows will fail to start Docker Desktop. If Windows cannot start Docker Desktop, your first indication will be an error message when you run the PowerShell script which configures the lab.
+                    - From time to time, Windows takes a lengthy amount of time to successfully start the Docker Desktop process and, rarely, Windows will fail to start Docker Desktop. If Windows cannot start Docker Desktop, your first indication will be an error message when you run the PowerShell script that configures the lab.
 
                         [![16_start_docker_error](../images/pf_lab/16_start_docker_error.png "Docker Process Not Running Error")](../images/pf_lab/16_start_docker_error.png){target=_blank}
     
                         ---
 
-                    - As the error message indicates, PowerShell will attempt to start or restart the Docker Desktop process. After a few seconds, the Docker Desktop application will open behind the PowerShell and you may bring it to the foreground to monitor the status.
+                    - As the error message indicates, PowerShell will attempt to start or restart the Docker Desktop process. After a few seconds, the Docker Desktop application will open behind the PowerShell, and you may bring it to the foreground to monitor the status.
 
                     ???+ attention "Docker for Windows Process Status"
 
@@ -121,7 +121,7 @@ We provide instructions for three different lab setup options.  Choose the optio
 
                         - ==An orange-colored icon== in the lower-left corner of the Docker Desktop application indicates the Docker process is not running and you have a couple of options:
 
-                            1. Wait for around 10 minutes, to see if Windows is able to start the Docker process.
+                            1. Wait for around 10 minutes to see if Windows can start the Docker process.
                             2. Launch a new instance of the [WWT Programmability Foundations On-Demand Lab](https://www.wwt.com/lab/programmability-foundations-lab "WWT Programmability Foundations On-Demand Lab"){target=_blank}.
 
                         [![17_docker_status](../images/pf_lab/17_docker_status.png "Docker for Windows Process Status Check")](../images/pf_lab/17_docker_status.png){target=_blank}
@@ -158,7 +158,7 @@ We provide instructions for three different lab setup options.  Choose the optio
 
             ??? help "Lab Restart Instructions"
 
-                The lab setup process creates a shotcut on the Windows desktop which will help you restore the lab environment, in the event the JupyterLab browser tab closes, Windows restarts, etc.
+                The lab setup process creates a shortcut on the Windows desktop, which will help you restore the lab environment in the event the JupyterLab browser tab closes, Windows restarts, etc.
 
                 !!! attention "Notice"
 
@@ -174,7 +174,7 @@ We provide instructions for three different lab setup options.  Choose the optio
             !!! attention
 
                 - This option assumes you have an operational Docker runtime environment and that your Docker daemon can connect to and download images from [Docker Hub](https://hub.docker.com/repository/docker/wwt01/devasc-data-formats "Lab Image on Docker Hub){target=_blank}.
-                - The screenshots in the directions represent an example from a **macOS Terminal** and the same commands and procedures also work with **Windows PowerShell**.
+                - The screenshots in the directions represent an example from a **macOS Terminal**, and the same commands and procedures also work with **Windows PowerShell**.
 
             ???+ todo "Step 1"
 
@@ -222,7 +222,7 @@ We provide instructions for three different lab setup options.  Choose the optio
 
             ??? help "Lab Environment Shutdown and Restart"
 
-                - To shutdown the lab environment, return to your terminal window and press ++ctrl+c++ twice, **within 5 seconds**.
+                - To shut down the lab environment, return to your terminal window and press ++ctrl+c++ twice, **within 5 seconds**.
 
                 [![5_stop_jupyter](../images/docker_hub/5_stop_jupyter.png "Stop the JupyterLab Server")](../images/docker_hub/5_stop_jupyter.png){target=_blank}
 
@@ -266,7 +266,7 @@ We provide instructions for three different lab setup options.  Choose the optio
                 3. A Docker runtime environment such as [Docker Desktop for Windows or macOS](https://www.docker.com/products/docker-desktop "Docker Desktop for Windows or macOS"){target=_blank}, [Docker for Linux](https://hub.docker.com/search?offering=community&operating_system=linux&q=&type=edition "Docker for Linux"){target=_blank}, etc..
 
  
-                The screenshots in the directions represent an example from a **macOS** computer and the same procedures also work with **Microsoft Windows** and **Linux** computers.
+                The screenshots in the directions represent an example from a **macOS** computer, and the same procedures also work with **Microsoft Windows** and **Linux** computers.
 
             ???+ todo "Step 1"
 
@@ -328,7 +328,7 @@ We provide instructions for three different lab setup options.  Choose the optio
 
                 Observe the Development Environment complete activation:
 
-                1. The Git **repository file tree** will appear on the left side of the VS Code Window.
+                1. The Git **repository file tree** will appear on the left side of the VS Code window.
                 2. The **VS Code terminal window** will display **JupyterLab** activation information.
 
                 !!! attention "Notice"
