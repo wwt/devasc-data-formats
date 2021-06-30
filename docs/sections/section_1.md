@@ -97,7 +97,7 @@ We provide instructions for three different lab setup options.  Choose the optio
                     1. Click the PowerShell icon in the taskbar to open a new PowerShell window.
                     2. Then, copy the entire command below to your clipboard.
                     3. Right-click in the PowerShell window to paste the command
-                    4. Press your Return/Enter key to run the command.
+                    4. Press your ++enter++ or ++"Return"++ key to run the command.
 
                     ```powershell
                     Set-Executionpolicy -Scope CurrentUser -ExecutionPolicy UnRestricted -Force; Set-Location \Users\admin; Invoke-WebRequest -Uri 'https://devasc-data-formats.s3-us-west-2.amazonaws.com/setup_lab.ps1' -OutFile 'setup_lab.ps1’; .\setup_lab.ps1
@@ -105,18 +105,18 @@ We provide instructions for three different lab setup options.  Choose the optio
     
                     [![7_paste_ps_commands](../images/pf_lab/7_paste_ps_commands.png "Copy, Paste, & Run the Commands into a PowerShell Window")](../images/pf_lab/7_paste_ps_commands.png){target=_blank}
 
-                ??? error "What to do if you see a **Docker Desktop process is not running** error message:"
+                ??? error "What to do if you see a 'Docker Desktop process is not running' error message:"
 
-                    - From time to time, Windows takes a lengthy amount of time to successfully start the Docker Desktop process and, rarely, Windows will fail to start Docker Desktop. If Windows cannot start Docker Desktop, your first indication will be an error message when you run the PowerShell script that configures the lab.
+                    - From time to time, the Windows desktop in this lab takes a lengthy amount of time to successfully start the Docker Desktop process and, rarely, Windows will fail to start Docker Desktop. If Windows cannot start Docker Desktop, your first indication will be an error message when you run the PowerShell script that configures the lab.
 
                         [![16_start_docker_error](../images/pf_lab/16_start_docker_error.png "Docker Process Not Running Error")](../images/pf_lab/16_start_docker_error.png){target=_blank}
     
                         ---
 
-                    - As the error message indicates, PowerShell will attempt to start or restart the Docker Desktop process. After a few seconds, the Docker Desktop application will open behind the PowerShell, and you may bring it to the foreground to monitor the status.
-
                     ???+ attention "Docker for Windows Process Status"
 
+                        - As the PowerShell error message indicates, PowerShell will attempt to start or restart the Docker Desktop process. After a few seconds, the Docker Desktop application will open behind the PowerShell window, and you may bring it to the foreground to monitor the status.
+                        
                         - ==A teal-colored icon== in the lower-left corner of the Docker Desktop application indicates the Docker process is running and you should be able to re-run the PowerShell script to configure the lab environment. Sometimes, Windows takes 5-10 minutes to start the Docker process.
 
                         - ==An orange-colored icon== in the lower-left corner of the Docker Desktop application indicates the Docker process is not running and you have a couple of options:
