@@ -436,18 +436,29 @@
 <p>A web browser with <a href="https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html#supported-browsers" target="_blank" title="JupyterLab Supported Browsers">JupyterLab support</a>.</p>
 </li>
 </ol>
-<p>You may run the lab Docker Container in:</p>
-<ul>
-<li>The <a href="https://www.wwt.com/lab/programmability-foundations-lab" target="_blank" title="WWT Programmability Foundations On-Demand Lab">WWT Programmability Foundations On-Demand Lab</a></li>
-<li>Your own Docker environment.</li>
-<li>A Visual Studio Code Development Container</li>
-</ul>
 <hr />
 <h2 id="lab-setup-instructions"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 3v2a2 2 0 0 1 2 2v12a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V7a2 2 0 0 1 2-2V3H3m4 6h3v1H7V9m0 2h3v1H7v-1m3 5H7v-1h3v1m2-2H7v-1h5v1m0-6H7V7h5v1z"/></svg></span> Lab Setup Instructions<a class="headerlink" href="#lab-setup-instructions" title="Permanent link">&para;</a></h2>
 <p>We provide instructions for three different lab setup options.  Choose the option that best suits your needs and then follow the step-by-step directions:</p>
-<details class="abstract" open="open"><summary>Lab Setup Options</summary><p><strong>Option #1:</strong> Auto-provision the environment in the WWT Programmability Foundations Lab.</p>
-<p><strong>Option #2:</strong> Run a pre-built Container in your own Docker runtime environment.</p>
-<p><strong>Option #3:</strong> Use the Visual Studio Code Development Container in the <a href="https://github.com/wwt/devasc-data-formats" target="_blank" title="DEVASC Data Formats Git Repository">Git Repository</a>.</p>
+<details class="abstract" open="open"><summary>Lab Setup Options</summary><ol>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M255.03 261.65c6.25 6.25 16.38 6.25 22.63 0l11.31-11.31c6.25-6.25 6.25-16.38 0-22.63L253.25 192l35.71-35.72c6.25-6.25 6.25-16.38 0-22.63l-11.31-11.31c-6.25-6.25-16.38-6.25-22.63 0l-58.34 58.34c-6.25 6.25-6.25 16.38 0 22.63l58.35 58.34zm96.01-11.3 11.31 11.31c6.25 6.25 16.38 6.25 22.63 0l58.34-58.34c6.25-6.25 6.25-16.38 0-22.63l-58.34-58.34c-6.25-6.25-16.38-6.25-22.63 0l-11.31 11.31c-6.25 6.25-6.25 16.38 0 22.63L386.75 192l-35.71 35.72c-6.25 6.25-6.25 16.38 0 22.63zM624 416H381.54c-.74 19.81-14.71 32-32.74 32H288c-18.69 0-33.02-17.47-32.77-32H16c-8.8 0-16 7.2-16 16v16c0 35.2 28.8 64 64 64h512c35.2 0 64-28.8 64-64v-16c0-8.8-7.2-16-16-16zM576 48c0-26.4-21.6-48-48-48H112C85.6 0 64 21.6 64 48v336h512V48zm-64 272H128V64h384v256z"/></svg></span> <strong>Auto-provision the environment in the <a href="https://www.wwt.com/lab/programmability-foundations-lab" target="_blank" title="WWT Programmability Foundations On-Demand Lab">WWT Programmability Foundations On-Demand Lab</a>.</strong></p>
+<ul>
+<li>The best chioce if you don't have a place to install and run Docker or if you need an on-demand learning and test environment.</li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><path d="M349.9 236.3h-66.1v-59.4h66.1v59.4zm0-204.3h-66.1v60.7h66.1V32zm78.2 144.8H362v59.4h66.1v-59.4zm-156.3-72.1h-66.1v60.1h66.1v-60.1zm78.1 0h-66.1v60.1h66.1v-60.1zm276.8 100c-14.4-9.7-47.6-13.2-73.1-8.4-3.3-24-16.7-44.9-41.1-63.7l-14-9.3-9.3 14c-18.4 27.8-23.4 73.6-3.7 103.8-8.7 4.7-25.8 11.1-48.4 10.7H2.4c-8.7 50.8 5.8 116.8 44 162.1 37.1 43.9 92.7 66.2 165.4 66.2 157.4 0 273.9-72.5 328.4-204.2 21.4.4 67.6.1 91.3-45.2 1.5-2.5 6.6-13.2 8.5-17.1l-13.3-8.9zm-511.1-27.9h-66v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm78.1 0h-66.1v59.4h66.1v-59.4zm-78.1-72.1h-66.1v60.1h66.1v-60.1z"/></svg></span> <strong>Run a pre-built Container in your own Docker runtime environment.</strong></p>
+<ul>
+<li>The best choice if you want the quickest lab setup experience and ideal if you already have Docker running in your development environment.</li>
+</ul>
+</li>
+<li>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 16.47V7.39l-6 4.54M2.22 9.19a.858.858 0 0 1-.02-1.15l1.2-1.11c.2-.18.69-.26 1.05 0l3.42 2.61 7.93-7.25c.32-.32.87-.45 1.5-.12l4 1.91c.36.21.7.54.7 1.15v13.5c0 .4-.29.83-.6 1l-4.4 2.1c-.32.13-.92.01-1.13-.2l-8.02-7.3-3.4 2.6c-.38.26-.85.19-1.05 0l-1.2-1.1c-.32-.33-.28-.87.05-1.2l3-2.7"/></svg></span> <strong>Use the Visual Studio Code Development Container in the <a href="https://github.com/wwt/devasc-data-formats" target="_blank" title="DEVASC Data Formats Git Repository">Git Repository</a>.</strong></p>
+<ul>
+<li>The best choice if you want an easy environment to both run the lab and also to access or modify source files.</li>
+</ul>
+</li>
+</ol>
 <div class="tabbed-set" data-tabs="1:3"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><label for="__tabbed_1_1">Option #1</label><div class="tabbed-content">
 <details class="example" open="open"><summary>Auto-provision the environment in the WWT Programmability Foundations Lab</summary><details class="todo" open="open"><summary>Step 1</summary><p>Launch a new copy of the <a href="https://www.wwt.com/lab/programmability-foundations-lab" target="_blank" title="WWT Programmability Foundations On-Demand Lab">WWT Programmability Foundations On-Demand Lab</a> and click <a href="https://www.wwt.com/my/labs" target="_blank" title="My WWT Labs">View Labs</a>:</p>
 <p><a href="../../images/pf_lab/1_launch_lab.png" target="_blank"><img alt="1_launch_lab" src="../../images/pf_lab/1_launch_lab.png" title="Launch a New Programmability Foundations Lab Instance" /></a></p>
@@ -486,23 +497,23 @@
 <li>Click the PowerShell icon in the taskbar to open a new PowerShell window.</li>
 <li>Then, copy the entire command below to your clipboard.</li>
 <li>Right-click in the PowerShell window to paste the command</li>
-<li>Press your Return/Enter key to run the command.</li>
+<li>Press your <span class="keys"><kbd class="key-enter">Enter</kbd></span> or <span class="keys"><kbd>Return</kbd></span> key to run the command.</li>
 </ol>
 <div class="highlight"><pre><span></span><code><span class="nb">Set-Executionpolicy</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="n">-ExecutionPolicy</span> <span class="n">UnRestricted</span> <span class="n">-Force</span><span class="p">;</span> <span class="nb">Set-Location</span> <span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">admin</span><span class="p">;</span> <span class="nb">Invoke-WebRequest</span> <span class="n">-Uri</span> <span class="s1">&#39;https://devasc-data-formats.s3-us-west-2.amazonaws.com/setup_lab.ps1&#39;</span> <span class="n">-OutFile</span> <span class="err">&#39;</span><span class="n">setup_lab</span><span class="p">.</span><span class="n">ps1</span><span class="err">’</span><span class="p">;</span> <span class="p">.\</span><span class="n">setup_lab</span><span class="p">.</span><span class="n">ps1</span>
 </code></pre></div>
 <p><a href="../../images/pf_lab/7_paste_ps_commands.png" target="_blank"><img alt="7_paste_ps_commands" src="../../images/pf_lab/7_paste_ps_commands.png" title="Copy, Paste, &amp; Run the Commands into a PowerShell Window" /></a></p>
 </div>
-<details class="error"><summary>What to do if you see a <strong>Docker Desktop process is not running</strong> error message:</summary><ul>
+<details class="error"><summary>What to do if you see a 'Docker Desktop process is not running' error message:</summary><ul>
 <li>
-<p>From time to time, Windows takes a lengthy amount of time to successfully start the Docker Desktop process and, rarely, Windows will fail to start Docker Desktop. If Windows cannot start Docker Desktop, your first indication will be an error message when you run the PowerShell script that configures the lab.</p>
+<p>From time to time, the Windows desktop in this lab takes a lengthy amount of time to successfully start the Docker Desktop process and, rarely, Windows will fail to start Docker Desktop. If Windows cannot start Docker Desktop, your first indication will be an error message when you run the PowerShell script that configures the lab.</p>
 <p><a href="../../images/pf_lab/16_start_docker_error.png" target="_blank"><img alt="16_start_docker_error" src="../../images/pf_lab/16_start_docker_error.png" title="Docker Process Not Running Error" /></a></p>
 <hr />
 </li>
-<li>
-<p>As the error message indicates, PowerShell will attempt to start or restart the Docker Desktop process. After a few seconds, the Docker Desktop application will open behind the PowerShell, and you may bring it to the foreground to monitor the status.</p>
-</li>
 </ul>
 <details class="attention" open="open"><summary>Docker for Windows Process Status</summary><ul>
+<li>
+<p>As the PowerShell error message indicates, PowerShell will attempt to start or restart the Docker Desktop process. After a few seconds, the Docker Desktop application will open behind the PowerShell window, and you may bring it to the foreground to monitor the status.</p>
+</li>
 <li>
 <p><mark>A teal-colored icon</mark> in the lower-left corner of the Docker Desktop application indicates the Docker process is running and you should be able to re-run the PowerShell script to configure the lab environment. Sometimes, Windows takes 5-10 minutes to start the Docker process.</p>
 </li>
