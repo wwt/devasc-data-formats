@@ -16,12 +16,6 @@ You only need a few things to start working through the labs:
 
 2. A web browser with [JupyterLab support](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html#supported-browsers "JupyterLab Supported Browsers"){target=_blank}.
 
-You may run the lab Docker Container in:
-
-- The [WWT Programmability Foundations On-Demand Lab](https://www.wwt.com/lab/programmability-foundations-lab "WWT Programmability Foundations On-Demand Lab"){target=_blank}
-- Your own Docker environment.
-- A Visual Studio Code Development Container
-
 ---
 
 ## :material-beaker: Lab Setup Instructions
@@ -30,11 +24,14 @@ We provide instructions for three different lab setup options.  Choose the optio
 
 ???+ abstract "Lab Setup Options"
 
-    **Option #1:** Auto-provision the environment in the WWT Programmability Foundations Lab.
+    1. :fontawesome-solid-laptop-code: **Auto-provision the environment in the [WWT Programmability Foundations On-Demand Lab](https://www.wwt.com/lab/programmability-foundations-lab "WWT Programmability Foundations On-Demand Lab"){target=_blank}.**
+        - The best chioce if you don't have a place to install and run Docker or if you need an on-demand learning and test environment.
 
-    **Option #2:** Run a pre-built Container in your own Docker runtime environment.
+    2. :fontawesome-brands-docker: **Run a pre-built Container in your own Docker runtime environment.**
+        - The best choice if you want the quickest lab setup experience and ideal if you already have Docker running in your development environment.
 
-    **Option #3:** Use the Visual Studio Code Development Container in the [Git Repository](https://github.com/wwt/devasc-data-formats "DEVASC Data Formats Git Repository"){target=_blank}.
+    3. :material-microsoft-visual-studio-code: **Use the Visual Studio Code Development Container in the [Git Repository](https://github.com/wwt/devasc-data-formats "DEVASC Data Formats Git Repository"){target=_blank}.**
+        - The best choice if you want an easy environment to both run the lab and also to access or modify source files.
 
     === "Option #1"
 
