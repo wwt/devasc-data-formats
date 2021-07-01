@@ -16,12 +16,6 @@ You only need a few things to start working through the labs:
 
 2. A web browser with [JupyterLab support](https://jupyterlab.readthedocs.io/en/stable/getting_started/installation.html#supported-browsers "JupyterLab Supported Browsers"){target=_blank}.
 
-You may run the lab Docker Container in:
-
-- The [WWT Programmability Foundations On-Demand Lab](https://www.wwt.com/lab/programmability-foundations-lab "WWT Programmability Foundations On-Demand Lab"){target=_blank}
-- Your own Docker environment.
-- A Visual Studio Code Development Container
-
 ---
 
 ## :material-beaker: Lab Setup Instructions
@@ -30,11 +24,14 @@ We provide instructions for three different lab setup options.  Choose the optio
 
 ???+ abstract "Lab Setup Options"
 
-    **Option #1:** Auto-provision the environment in the WWT Programmability Foundations Lab.
+    1. :fontawesome-solid-laptop-code: **Auto-provision the environment in the [WWT Programmability Foundations On-Demand Lab](https://www.wwt.com/lab/programmability-foundations-lab "WWT Programmability Foundations On-Demand Lab"){target=_blank}.**
+        - The best chioce if you don't have a place to install and run Docker or if you need an on-demand learning and test environment.
 
-    **Option #2:** Run a pre-built Container in your own Docker runtime environment.
+    2. :fontawesome-brands-docker: **Run a pre-built Container in your own Docker runtime environment.**
+        - The best choice if you want the quickest lab setup experience and ideal if you already have Docker running in your development environment.
 
-    **Option #3:** Use the Visual Studio Code Development Container in the [Git Repository](https://github.com/wwt/devasc-data-formats "DEVASC Data Formats Git Repository"){target=_blank}.
+    3. :material-microsoft-visual-studio-code: **Use the Visual Studio Code Development Container in the [Git Repository](https://github.com/wwt/devasc-data-formats "DEVASC Data Formats Git Repository"){target=_blank}.**
+        - The best choice if you want an easy environment to both run the lab and also to access or modify source files.
 
     === "Option #1"
 
@@ -97,7 +94,7 @@ We provide instructions for three different lab setup options.  Choose the optio
                     1. Click the PowerShell icon in the taskbar to open a new PowerShell window.
                     2. Then, copy the entire command below to your clipboard.
                     3. Right-click in the PowerShell window to paste the command
-                    4. Press your Return/Enter key to run the command.
+                    4. Press your ++enter++ or ++"Return"++ key to run the command.
 
                     ```powershell
                     Set-Executionpolicy -Scope CurrentUser -ExecutionPolicy UnRestricted -Force; Set-Location \Users\admin; Invoke-WebRequest -Uri 'https://devasc-data-formats.s3-us-west-2.amazonaws.com/setup_lab.ps1' -OutFile 'setup_lab.ps1’; .\setup_lab.ps1
@@ -105,18 +102,18 @@ We provide instructions for three different lab setup options.  Choose the optio
     
                     [![7_paste_ps_commands](../images/pf_lab/7_paste_ps_commands.png "Copy, Paste, & Run the Commands into a PowerShell Window")](../images/pf_lab/7_paste_ps_commands.png){target=_blank}
 
-                ??? error "What to do if you see a **Docker Desktop process is not running** error message:"
+                ??? error "What to do if you see a 'Docker Desktop process is not running' error message:"
 
-                    - From time to time, Windows takes a lengthy amount of time to successfully start the Docker Desktop process and, rarely, Windows will fail to start Docker Desktop. If Windows cannot start Docker Desktop, your first indication will be an error message when you run the PowerShell script that configures the lab.
+                    - From time to time, the Windows desktop in this lab takes a lengthy amount of time to successfully start the Docker Desktop process and, rarely, Windows will fail to start Docker Desktop. If Windows cannot start Docker Desktop, your first indication will be an error message when you run the PowerShell script that configures the lab.
 
                         [![16_start_docker_error](../images/pf_lab/16_start_docker_error.png "Docker Process Not Running Error")](../images/pf_lab/16_start_docker_error.png){target=_blank}
     
                         ---
 
-                    - As the error message indicates, PowerShell will attempt to start or restart the Docker Desktop process. After a few seconds, the Docker Desktop application will open behind the PowerShell, and you may bring it to the foreground to monitor the status.
-
                     ???+ attention "Docker for Windows Process Status"
 
+                        - As the PowerShell error message indicates, PowerShell will attempt to start or restart the Docker Desktop process. After a few seconds, the Docker Desktop application will open behind the PowerShell window, and you may bring it to the foreground to monitor the status.
+                        
                         - ==A teal-colored icon== in the lower-left corner of the Docker Desktop application indicates the Docker process is running and you should be able to re-run the PowerShell script to configure the lab environment. Sometimes, Windows takes 5-10 minutes to start the Docker process.
 
                         - ==An orange-colored icon== in the lower-left corner of the Docker Desktop application indicates the Docker process is not running and you have a couple of options:

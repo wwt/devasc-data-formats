@@ -21,6 +21,4 @@ RUN python -m pip install --upgrade pip && \
     python -m pip install -r requirements/requirements.txt
 
 # Run script to launch server services
-ENTRYPOINT [ "./requirements/server-launch.sh" ]
-
 CMD [ "/bin/bash" ]
