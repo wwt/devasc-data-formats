@@ -188,7 +188,7 @@ We provide instructions for three different lab setup options.  Choose the optio
 
                     The Docker Command performs the following actions:
 
-                    1. Downloas the **wwt01/devasc-data-formats** Docker Image from [Docker Hub](https://hub.docker.com/repository/docker/wwt01/devasc-data-formats "Lab Image on Docker Hub){target=_blank}.
+                    1. Downloads the **wwt01/devasc-data-formats** Docker Image from [Docker Hub](https://hub.docker.com/repository/docker/wwt01/devasc-data-formats "Lab Image on Docker Hub){target=_blank}.
                     2. Creates a new Docker Container with the name **data-formats**
                     3. Attaches to the Container shell.
                     4. Starts a **JupyterLab** server in the Container on **TCP port 8888**.
