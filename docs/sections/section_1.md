@@ -178,7 +178,7 @@ We provide instructions for three different lab setup options.  Choose the optio
                 1. Copy the following command to your clipboard.
                 2. Open a terminal shell on the same system as your Docker runtime environment.
                 3. Paste the command into your terminal shell.
-                4. Run the command.
+                4. Press your ++enter++ or ++"Return"++ key to run the command.
 
                 ```bash
                 docker run -itp 8888:8888 --name data-formats wwt01/devasc-data-formats
