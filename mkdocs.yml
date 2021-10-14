@@ -2,8 +2,7 @@
 site_name: "WWT - Cisco DevNet DEVASC Data Encoding Formats"
 site_url: "https://wwt.github.io/devasc-data-formats"
 nav:
-  - Home:
-    - About: index.md
+  - Home: index.md
   - Lab Exercises:
     - Hands-On Lab Setup: sections/section_1.md
 
@@ -76,4 +75,3 @@ markdown_extensions:
   - pymdownx.tilde
   - toc:
       permalink: true
-
