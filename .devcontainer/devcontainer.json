@@ -21,6 +21,7 @@
     ],
     "postAttachCommand": "./requirements/server-launch.sh",
     "settings": {
+        "#terminal.integrated.defaultProfile.linux#": "/bin/bash",
         "[yaml]": {
             "editor.insertSpaces": true,
             "editor.tabSize": 2,
