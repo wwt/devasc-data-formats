@@ -5,14 +5,16 @@
         "context": ".."
     },
     "extensions": [
-        "davidanson.vscode-markdownlint",
-        "docsmsft.docs-markdown",
-        "docsmsft.docs-yaml",
-        "ms-azuretools.vscode-docker",
-        "ms-python.python",
-        "ms-python.vscode-pylance",
-        "redhat.vscode-yaml",
-    ],
+		"davidanson.vscode-markdownlint",
+		"docsmsft.docs-markdown",
+		"docsmsft.docs-yaml",
+        "github.vscode-pull-request-github",
+		"ms-azuretools.vscode-docker",
+		"ms-python.python",
+		"ms-python.vscode-pylance",
+		"redhat.vscode-yaml",
+		
+	],
     "forwardPorts": [
         8000,
         8888
