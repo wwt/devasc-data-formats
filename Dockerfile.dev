@@ -6,6 +6,9 @@ LABEL maintainer="Tim Hull <tim.hull@wwt.com>"
 
 WORKDIR /app
 
+# TCP 8000 for MkDocs server
+EXPOSE 8000/tcp
+
 # TCP 8888 for Jupyter Lab Server
 EXPOSE 8888/tcp
 
