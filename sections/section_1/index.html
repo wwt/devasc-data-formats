@@ -495,8 +495,8 @@
 <li>Right-click in the PowerShell window to paste the command</li>
 <li>Press your <span class="keys"><kbd class="key-enter">Enter</kbd></span> or <span class="keys"><kbd>Return</kbd></span> key to run the command.</li>
 </ol>
-<div class="highlight"><pre><span></span><code><span class="nb">Set-Executionpolicy</span> <span class="n">-Scope</span> <span class="n">CurrentUser</span> <span class="n">-ExecutionPolicy</span> <span class="n">UnRestricted</span> <span class="n">-Force</span><span class="p">;</span> <span class="nb">Set-Location</span> <span class="p">\</span><span class="n">Users</span><span class="p">\</span><span class="n">admin</span><span class="p">;</span> <span class="nb">Invoke-WebRequest</span> <span class="n">-Uri</span> <span class="s1">&#39;https://devasc-data-formats.s3-us-west-2.amazonaws.com/setup_lab.ps1&#39;</span> <span class="n">-OutFile</span> <span class="err">&#39;</span><span class="n">setup_lab</span><span class="p">.</span><span class="n">ps1</span><span class="err">’</span><span class="p">;</span> <span class="p">.\</span><span class="n">setup_lab</span><span class="p">.</span><span class="n">ps1</span>
-</code></pre></div>
+<p><code>powershell
+Set-Executionpolicy -Scope CurrentUser -ExecutionPolicy UnRestricted -Force; Set-Location \Users\admin; Invoke-WebRequest -Uri 'https://devasc-data-formats.s3-us-west-2.amazonaws.com/setup_lab.ps1' -OutFile 'setup_lab.ps1’; .\setup_lab.ps1</code></p>
 <p><a href="../../images/pf_lab/7_paste_ps_commands.png" target="_blank"><img alt="7_paste_ps_commands" src="../../images/pf_lab/7_paste_ps_commands.png" title="Copy, Paste, &amp; Run the Commands into a PowerShell Window" /></a></p>
 </div>
 <details class="error"><summary>What to do if you see a 'Docker Desktop process is not running' error message:</summary><ul>
@@ -566,8 +566,8 @@
 <li>Paste the command into your terminal shell.</li>
 <li>Press your <span class="keys"><kbd class="key-enter">Enter</kbd></span> or <span class="keys"><kbd>Return</kbd></span> key to run the command.</li>
 </ol>
-<div class="highlight"><pre><span></span><code>docker run -itp <span class="m">8888</span>:8888 --name data-formats wwt01/devasc-data-formats
-</code></pre></div>
+<p><code>bash
+docker run -itp 8888:8888 --name data-formats wwt01/devasc-data-formats</code></p>
 <details class="help"><summary>Docker Command Details</summary><p>The Docker Command performs the following actions:</p>
 <ol>
 <li>Downloads the <strong>wwt01/devasc-data-formats</strong> Docker Image from <a href="https://hub.docker.com/repository/docker/wwt01/devasc-data-formats &quot;Lab Image on Docker Hub" target="_blank">Docker Hub</a>.</li>
@@ -601,21 +601,21 @@
 <ul>
 <li>Restart an existing lab environment Container (restores previous lab progress):</li>
 </ul>
-<div class="highlight"><pre><span></span><code>docker start data-formats
-</code></pre></div>
+<p><code>bash
+docker start data-formats</code></p>
 <ul>
 <li>Delete an existing lab environment Container (removes previous lab progress):</li>
 </ul>
-<div class="highlight"><pre><span></span><code>docker stop data-formats
-docker rm data-formats
-</code></pre></div>
+<p><code>bash
+docker stop data-formats
+docker rm data-formats</code></p>
 <ul>
 <li>Remove the Docker Image:</li>
 </ul>
-<div class="highlight"><pre><span></span><code>docker stop data-formats
+<p><code>bash
+docker stop data-formats
 docker rm data-formats
-docker rmi wwt01/devasc-data-formats
-</code></pre></div>
+docker rmi wwt01/devasc-data-formats</code></p>
 </details>
 </details>
 </div>
@@ -637,8 +637,8 @@ docker rmi wwt01/devasc-data-formats
 <p>The screenshots in the directions represent an example from a <strong>macOS</strong> computer, and the same procedures also work with <strong>Microsoft Windows</strong> and <strong>Linux</strong> computers.</p>
 </div>
 <details class="todo" open="open"><summary>Step 1</summary><p>Clone the <a href="https://github.com/wwt/devasc-data-formats" target="_blank" title="DEVASC Data Formats Git Repository">Git Repository</a> to your development computer with the following command:</p>
-<div class="highlight"><pre><span></span><code>git clone https://github.com/wwt/devasc-data-formats.git
-</code></pre></div>
+<p><code>bash
+git clone https://github.com/wwt/devasc-data-formats.git</code></p>
 <p><a href="../../images/dev_container/1_clone_repo.png" target="_blank"><img alt="1_clone_repo" src="../../images/dev_container/1_clone_repo.png" title="Clone the DEVASC Data Formats Git Repository" /></a></p>
 </details>
 <details class="todo"><summary>Step 2</summary><p>Install the <a href="https://marketplace.visualstudio.com/items?itemName=ms-vscode-remote.vscode-remote-extensionpack" target="_blank" title="Visual Studio Code Remote Development Extension Pack">Visual Studio Code Remote Development Extension Pack</a>:</p>
@@ -647,8 +647,8 @@ docker rmi wwt01/devasc-data-formats
 <li>Click the <strong>Extensions</strong> icon.</li>
 <li>
 <p>Copy the <strong>Remote Development Pack Extension ID string</strong> to your clipboard:</p>
-<div class="highlight"><pre><span></span><code>ms-vscode-remote.vscode-remote-extensionpack
-</code></pre></div>
+<p><code>text
+ms-vscode-remote.vscode-remote-extensionpack</code></p>
 </li>
 <li>
 <p>Paste the <strong>Remote Development Pack Extension ID string</strong> in the search box.</p>
