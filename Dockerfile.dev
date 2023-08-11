@@ -1,6 +1,6 @@
 # Dockerfile for WWT - Cisco DevNet DEVASC Data Formats Study Resources
 
-FROM python:3.9-slim-buster
+FROM python:3.11-slim-buster
 
 LABEL maintainer="Tim Hull <tim.hull@wwt.com>"
 
@@ -14,7 +14,7 @@ EXPOSE 8888/tcp
 
 # Update repositories and install Git
 RUN apt-get update && \
-    apt-get install -y git
+    apt-get install -y git gcc python3-dev
 
 # Copy requirements files to Image
 COPY requirements/ requirements/

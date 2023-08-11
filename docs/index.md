@@ -38,7 +38,7 @@ Here is a real example of some data that a network device sent in response to a 
 
 ### :fontawesome-regular-file-code: A Side-by-Side Comparision
 
-???+ abstract "Example Network Device CLI and API Response Data"
+??? abstract "Example Network Device CLI and API Response Data"
 
     Even though the CLI and API data formats look drastically different, they both provide the _exact_ same data.
 
